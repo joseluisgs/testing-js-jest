@@ -27,6 +27,7 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
 - [Precondiciones y poscondciones de test](#precondiciones-y-poscondciones-de-test)
 - [Testing asíncrono](#testing-asíncrono)
 - [Testing API REST](#testing-api-rest)
+- [Testing DOM](#testing-dom)
 - [Autor](#autor)
   - [Licencia](#licencia)
 
@@ -48,7 +49,7 @@ npm run test
 ```
 
 # Matchers
-https://jestjs.io/docs/es-ES/using-matchers
+ Los [Matchers](https://jestjs.io/docs/es-ES/using-matchers) nos permiten comparar de defierente manera valores esperados con los obtenidos. Podemos hacerlo de la siguiente manera, aunque hay [mas](https://jestjs.io/docs/es-ES/expect):
 
 ## Igualdad
   - .toBe: Usado para comparar valores primitivos
@@ -103,8 +104,7 @@ Time:        1.703 s
 Ran all test suites.
 
 ## Informe de Cobertura Web
-Está en la carpeta coverage creada
-
+Está en la carpeta coverage creada, en coverage/lcov-report/index.html
 ## Test detectando cambios
 Jest nos ofrece el flag –watchAll para que este escuchando constantemente los cambios y pueda hacer las pruebas sobre los cambios realizados y no estar ejecutando el script constantemente.
 npm run test:vigilar
@@ -128,6 +128,10 @@ De esta manera podemos testar por ejemplo consumo de APIs REST y ya usar método
 Otra de las cosas que podemos hacer es testar nuestra propia API Rest o Api REST Remotas o simularlas en base de mocks. Para ello vamos a hacer uso de la librería [Supertest](https://github.com/visionmedia/supertest). También podríamos usar [Axios](https://github.com/axios/axios) como hemos visto en los apartados anteriores.
 
 Para testear más rápido podemos usar ficherso mocks locales.
+
+# Testing DOM
+Podemos testar nuestro DOM con [Jest](https://jestjs.io/docs/es-ES/tutorial-jquery) usando Vanila JS o JQuery, incluso podemos hacer uso de la librería [Jest-DOM](https://github.com/testing-library/jest-dom). Es recomendable que sepamos pasar la parte de la web y la lógica que queramos testear.
+
 
 # Autor
 
