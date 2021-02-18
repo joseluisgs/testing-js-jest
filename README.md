@@ -36,9 +36,11 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
 Conjunto de códigos con el objetivo de introducir la suite de test [Jest](https://jestjs.io/docs/es-ES/getting-started) y mostrar como realizar test unitarios.
 
 # Instalación
-https://jestjs.io/docs/es-ES/getting-started
+Es importante seguir la [documentación oficial](https://jestjs.io/docs/es-ES/getting-started). 
 
+```bash
 npm install --save-dev jest
+```
 
 ## Otras configuraciones
 Otras configuraciones realizadas las tienes en [Package.json](./package.json)
