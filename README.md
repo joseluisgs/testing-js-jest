@@ -1,12 +1,12 @@
 # Testing JS con JEST
 
-Conjunto de ejemplos para realizar test unitarios usando la librería JEST
+Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librería JEST.
 
 [![Jest](https://img.shields.io/badge/JS%20Test-Jest-red)](https://jestjs.io/docs/es-ES/getting-started)
 [![JS Code](https://img.shields.io/badge/JS%20Code-ES2019-yellow)](https://www.ecma-international.org/ecma-262)
 [![JS Style](https://img.shields.io/badge/JS%20Style-AirBnB-ff69b4)](https://airbnb.io/javascript)
-[![Licence](https://img.shields.io/github/license/joseluisgs/NodeMonRest)](https://github.com/joseluisgs/VueTalk/blob/main/LICENSE)
-![GitHub](https://img.shields.io/github/last-commit/joseluisgs/VueTalk)
+[![Licence](https://img.shields.io/github/license/joseluisgs/testing-js-jest)](https://github.com/joseluisgs/testing-js-jest/blob/main/LICENSE)
+![GitHub](https://img.shields.io/github/last-commit/joseluisgs/testing-js-jest)
 
 
 - [Testing JS con JEST](#testing-js-con-jest)
