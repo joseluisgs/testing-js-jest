@@ -1,0 +1,13 @@
+{
+  "presets": [
+    [
+      "airbnb",
+      {
+        "modules": "auto",
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]
+}

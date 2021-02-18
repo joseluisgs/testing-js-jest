@@ -1,0 +1,14 @@
+{
+    "restartable": "rs",
+    "verbose": true,
+    "ignore": [
+      "node_modules"
+    ],
+    "execMap": {
+      "js": "node --require @babel/register"
+    },
+    "watch": [
+      "src"
+    ],
+    "ext": "js"
+  }
