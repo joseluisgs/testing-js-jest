@@ -56,4 +56,8 @@ axiosGet(url)
   .catch((error) => { console.log(error); });
 console.log(url);
 
-console.log('Trabajando con Supertest');
+console.log('Trabajando con Supertest en API REST');
+
+console.log('Trabajando con en DOM');
+
+console.log('Trabajando con SnapShot');

@@ -28,6 +28,7 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
 - [Testing asíncrono](#testing-asíncrono)
 - [Testing API REST](#testing-api-rest)
 - [Testing DOM](#testing-dom)
+- [Snapshot testing](#snapshot-testing)
 - [Autor](#autor)
   - [Licencia](#licencia)
 
@@ -130,8 +131,16 @@ Otra de las cosas que podemos hacer es testar nuestra propia API Rest o Api REST
 Para testear más rápido podemos usar ficherso mocks locales.
 
 # Testing DOM
-Podemos testar nuestro DOM con [Jest](https://jestjs.io/docs/es-ES/tutorial-jquery) usando Vanila JS o JQuery, incluso podemos hacer uso de la librería [Jest-DOM](https://github.com/testing-library/jest-dom). Es recomendable que sepamos pasar la parte de la web y la lógica que queramos testear.
+Podemos testar nuestro DOM con [Jest](https://jestjs.io/docs/es-ES/tutorial-jquery) usando Vanila JS o JQuery, incluso podemos hacer uso de la librería [Jest-DOM](https://github.com/testing-library/jest-dom). Es recomendable que sepamos pasar la parte de la web y la lógica que queramos testear. Jest viene con jsdom que simula un entorno DOM como si estuviera en el navegador. Esto significa que cada API DOM que llamamos se puede observar de la misma manera que se observaría en un navegador.
 
+# Snapshot testing
+Los snapshots nos garantizan que no vaya a ocurrir algún cambio inesperado en nuestra UI. Comprobamos lo datos que tenemos con lo que estamos trayendo y que no deben de cambiar, ya que esto lo usamos para casos en donde algún dato en particular muy rara vez cambiará. 
+
+En caso de que queramos aceptar el cambio añadiremos el parámetro -u.
+
+Una vez ejecutado el test con snapshot, este nos creara una carpeta con el nombre __snapshots__. Esta fichero es una captura de los datos que le pasamos en el fichero .La primera vez que ejecutamos el test crea esa captura que se usara para validar. El resto de las veces comparará y si hay cambios dará error.
+
+Si queremos crear una excepción, añadiremos las excepciones dentro del método .toMatchSnapshot(). Es importante que cuando ejecutemos el test con las excepciones usemos el flag -u para que use los nuevo cambios si ya existiese una captura previa.
 
 # Autor
 
