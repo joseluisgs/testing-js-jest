@@ -26,6 +26,7 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
   - [Test detectando cambios](#test-detectando-cambios)
 - [Precondiciones y poscondciones de test](#precondiciones-y-poscondciones-de-test)
 - [Testing asíncrono](#testing-asíncrono)
+- [Testing API REST](#testing-api-rest)
 - [Autor](#autor)
   - [Licencia](#licencia)
 
@@ -42,8 +43,9 @@ Otras configuraciones realizadas las tienes en [Package.json](./package.json)
 
 ## Ejecutndo el test
 Debes tener un directorio llamado tests, y en ellos ficheros .espec.test.
-
+```bash
 npm run test
+```
 
 # Matchers
 https://jestjs.io/docs/es-ES/using-matchers
@@ -78,8 +80,9 @@ Podemos saber cuanto hemos testeado nuestro código realizando un análisis de c
 
 ## Informe de Cobertura consola
 npm run test:cobertura
-
+```bash
 jest --coverage
+```
 
  PASS  tests/funciones.spec.js
 --------------|---------|----------|---------|---------|-------------------
@@ -106,7 +109,9 @@ Está en la carpeta coverage creada
 Jest nos ofrece el flag –watchAll para que este escuchando constantemente los cambios y pueda hacer las pruebas sobre los cambios realizados y no estar ejecutando el script constantemente.
 npm run test:vigilar
 
+```bash
 jest --watchAll
+```
 
 # Precondiciones y poscondciones de test
 Muchas veces queremos tener una serie de condiciones a ejecutar antes o despues de cada test o de cada conjunto de test. Podemos ponerlo incluso en cada suite o conjunto de describe.
@@ -117,7 +122,12 @@ Muchas veces queremos tener una serie de condiciones a ejecutar antes o despues 
 
 # Testing asíncrono
 Cuando necesitamos realizar test con funciones asíncronas jest nos ofrece varias opciones, usando callbacks, promesas y async / await.
-De esta manera podemos testar por ejemplo consumo de APIs REST y ya usar métodos anteriores para saber si lo que recibimos es correcto
+De esta manera podemos testar por ejemplo consumo de APIs REST y ya usar métodos anteriores para saber si lo que recibimos es correcto.
+
+# Testing API REST
+Otra de las cosas que podemos hacer es testar nuestra propia API Rest o Api REST Remotas o simularlas en base de mocks. Para ello vamos a hacer uso de la librería [Supertest](https://github.com/visionmedia/supertest). También podríamos usar [Axios](https://github.com/axios/axios) como hemos visto en los apartados anteriores.
+
+Para testear más rápido podemos usar ficherso mocks locales.
 
 # Autor
 
