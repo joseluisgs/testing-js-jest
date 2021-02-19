@@ -31,6 +31,7 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
 - [Snapshot testing](#snapshot-testing)
 - [Autor](#autor)
   - [Licencia](#licencia)
+    - [Agradecimientos](#agradecimientos)
 
 ## Acerca de
 Conjunto de códigos con el objetivo de introducir la suite de test [Jest](https://jestjs.io/docs/es-ES/getting-started) y mostrar como realizar test unitarios.
@@ -155,3 +156,6 @@ Codificado con :sparkling\_heart: por [José Luis González Sánchez](https://tw
 
 Este proyecto esta licenciado bajo licencia **MIT**, si desea saber más, visite el fichero
 [LICENSE](./LICENSE) para su uso docente y educativo.
+
+### Agradecimientos
+Proyectos basados en este [excelente tutorial](https://tecnops.es/testing-en-javascript-con-jest-parte-1-de-2/). Muchas gracias
