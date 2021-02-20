@@ -11,8 +11,9 @@
     "watch": "nodemon",
     "build": "babel src -d dist",
     "test": "jest",
-    "test:cobertura": "jest --coverage",
-    "test:vigilar": "jest --watchAll"
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watchAll",
+    "test:coverage-all": "jest --coverage --watchAll"
   },
   "keywords": [],
   "author": "",

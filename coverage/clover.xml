@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1613670416750" clover="3.2.0">
-  <project timestamp="1613670416750" name="All files">
-    <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="17" coveredmethods="17" elements="43" coveredelements="43" complexity="0" loc="26" ncloc="26" packages="1" files="8" classes="8"/>
+<coverage generated="1613815664465" clover="3.2.0">
+  <project timestamp="1613815664465" name="All files">
+    <metrics statements="40" coveredstatements="40" conditionals="7" coveredconditionals="7" methods="26" coveredmethods="26" elements="73" coveredelements="73" complexity="0" loc="40" ncloc="40" packages="1" files="9" classes="9"/>
     <file name="arrays.js" path="/home/informatica/Proyectos/testing-js/src/arrays.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <line num="2" count="1" type="stmt"/>
@@ -21,6 +21,23 @@
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
+    </file>
+    <file name="contactos.js" path="/home/informatica/Proyectos/testing-js/src/contactos.js">
+      <metrics statements="14" coveredstatements="14" conditionals="7" coveredconditionals="7" methods="9" coveredmethods="9"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="14" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="7" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="35" count="6" type="stmt"/>
+      <line num="36" count="4" type="stmt"/>
+      <line num="41" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="43" count="1" type="stmt"/>
+      <line num="56" count="4" type="stmt"/>
+      <line num="63" count="3" type="stmt"/>
+      <line num="74" count="2" type="stmt"/>
+      <line num="75" count="1" type="stmt"/>
+      <line num="76" count="1" type="stmt"/>
     </file>
     <file name="funciones.js" path="/home/informatica/Proyectos/testing-js/src/funciones.js">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>

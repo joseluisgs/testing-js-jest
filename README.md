@@ -29,6 +29,7 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
 - [Testing API REST](#testing-api-rest)
 - [Testing DOM](#testing-dom)
 - [Snapshot testing](#snapshot-testing)
+- [Principios del TDD](#principios-del-tdd)
 - [Autor](#autor)
   - [Licencia](#licencia)
     - [Agradecimientos](#agradecimientos)
@@ -84,7 +85,7 @@ npm run test
 Podemos saber cuanto hemos testeado nuestro código realizando un análisis de cobertura. Jest nos ofrece el flag –coverage en la linea de comandos para comprobar la cobertura de nuestros test.
 
 ## Informe de Cobertura consola
-npm run test:cobertura
+npm run test:coverage
 ```bash
 jest --coverage
 ```
@@ -111,7 +112,7 @@ Ran all test suites.
 Está en la carpeta coverage creada, en coverage/lcov-report/index.html
 ## Test detectando cambios
 Jest nos ofrece el flag –watchAll para que este escuchando constantemente los cambios y pueda hacer las pruebas sobre los cambios realizados y no estar ejecutando el script constantemente.
-npm run test:vigilar
+npm run test:watch
 
 ```bash
 jest --watchAll
@@ -144,6 +145,20 @@ En caso de que queramos aceptar el cambio añadiremos el parámetro -u.
 Una vez ejecutado el test con snapshot, este nos creara una carpeta con el nombre __snapshots__. Esta fichero es una captura de los datos que le pasamos en el fichero .La primera vez que ejecutamos el test crea esa captura que se usara para validar. El resto de las veces comparará y si hay cambios dará error.
 
 Si queremos crear una excepción, añadiremos las excepciones dentro del método .toMatchSnapshot(). Es importante que cuando ejecutemos el test con las excepciones usemos el flag -u para que use los nuevo cambios si ya existiese una captura previa.
+
+# Principios del TDD
+Automatizar los test unitarios y poder trabajar con ellos nos ofrece iniciar las bases del [TDD (Test-Driven Development)](https://www.paradigmadigital.com/dev/tdd-como-metodologia-de-diseno-de-software/). Para ello: 
+- Crea el test
+- Comprueba que falla
+- Escribe el código justo para pasarlo
+- Comprueba que funciona
+- Refactoriza
+- Vuelve al primer paso
+- Y disfruta 🙂 
+
+El propósito del desarrollo guiado por pruebas es lograr un código limpio que funcione. La idea es que los requisitos sean traducidos a pruebas, de este modo, cuando las pruebas pasen se garantizará que el software cumple con los requisitos que se han establecido.
+
+Puedes ver este ejemplo en contactos.js, donde primero se hizo los test y luego se hizo una implementación que además presneta distintas alternativas.
 
 # Autor
 
