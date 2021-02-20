@@ -13,7 +13,7 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
   - [Acerca de](#acerca-de)
 - [Instalación](#instalación)
   - [Otras configuraciones](#otras-configuraciones)
-  - [Ejecutndo el test](#ejecutndo-el-test)
+  - [Ejecutando el test](#ejecutando-el-test)
 - [Matchers](#matchers)
   - [Igualdad](#igualdad)
   - [Numéricos](#numéricos)
@@ -24,7 +24,7 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
   - [Informe de Cobertura consola](#informe-de-cobertura-consola)
   - [Informe de Cobertura Web](#informe-de-cobertura-web)
   - [Test detectando cambios](#test-detectando-cambios)
-- [Precondiciones y poscondciones de test](#precondiciones-y-poscondciones-de-test)
+- [Precondiciones y postcondiciones de test](#precondiciones-y-postcondiciones-de-test)
 - [Testing asíncrono](#testing-asíncrono)
 - [Testing API REST](#testing-api-rest)
 - [Testing DOM](#testing-dom)
@@ -48,14 +48,14 @@ npm install --save-dev jest
 ## Otras configuraciones
 Otras configuraciones realizadas las tienes en [Package.json](./package.json)
 
-## Ejecutndo el test
-Debes tener un directorio llamado tests, y en ellos ficheros .espec.test.
+## Ejecutando el test
+Debes tener un directorio llamado tests, y en ellos ficheros .spec.test.
 ```bash
 npm run test
 ```
 
 # Matchers
- Los [Matchers](https://jestjs.io/docs/es-ES/using-matchers) nos permiten comparar de defierente manera valores esperados con los obtenidos. Podemos hacerlo de la siguiente manera, aunque hay [mas](https://jestjs.io/docs/es-ES/expect):
+ Los [Matchers](https://jestjs.io/docs/es-ES/using-matchers) nos permiten comparar de diferente manera valores esperados con los obtenidos. Podemos hacerlo de la siguiente manera, aunque hay [mas](https://jestjs.io/docs/es-ES/expect):
 
 ## Igualdad
   - .toBe: Usado para comparar valores primitivos
@@ -119,8 +119,8 @@ npm run test:watch
 jest --watchAll
 ```
 
-# Precondiciones y poscondciones de test
-Muchas veces queremos tener una serie de condiciones a ejecutar antes o despues de cada test o de cada conjunto de test. Podemos ponerlo incluso en cada suite o conjunto de describe.
+# Precondiciones y postcondiciones de test
+Muchas veces queremos tener una serie de condiciones a ejecutar antes o después de cada test o de cada conjunto de test. Podemos ponerlo incluso en cada suite o conjunto de describe.
 - afterEach(): Después de cada prueba.
 - afterAll(): Después de todas las pruebas.
 - beforeEach(): Antes de cada prueba.
@@ -133,10 +133,10 @@ De esta manera podemos testar por ejemplo consumo de APIs REST y ya usar método
 # Testing API REST
 Otra de las cosas que podemos hacer es testar nuestra propia API Rest o Api REST Remotas o simularlas en base de mocks. Para ello vamos a hacer uso de la librería [Supertest](https://github.com/visionmedia/supertest). También podríamos usar [Axios](https://github.com/axios/axios) como hemos visto en los apartados anteriores.
 
-Para testear más rápido podemos usar ficherso mocks locales.
+Para testear más rápido podemos usar ficheros mocks locales.
 
 # Testing DOM
-Podemos testar nuestro DOM con [Jest](https://jestjs.io/docs/es-ES/tutorial-jquery) usando Vanila JS o JQuery, incluso podemos hacer uso de la librería [Jest-DOM](https://github.com/testing-library/jest-dom). Es recomendable que sepamos pasar la parte de la web y la lógica que queramos testear. Jest viene con jsdom que simula un entorno DOM como si estuviera en el navegador. Esto significa que cada API DOM que llamamos se puede observar de la misma manera que se observaría en un navegador.
+Podemos testar nuestro DOM con [Jest](https://jestjs.io/docs/es-ES/tutorial-jquery) usando Vanilla JS o JQuery, incluso podemos hacer uso de la librería [Jest-DOM](https://github.com/testing-library/jest-dom). Es recomendable que sepamos pasar la parte de la web y la lógica que queramos testear. Jest viene con jsdom que simula un entorno DOM como si estuviera en el navegador. Esto significa que cada API DOM que llamamos se puede observar de la misma manera que se observaría en un navegador.
 
 # Snapshot testing
 Los snapshots nos garantizan que no vaya a ocurrir algún cambio inesperado en nuestra UI. Comprobamos lo datos que tenemos con lo que estamos trayendo y que no deben de cambiar, ya que esto lo usamos para casos en donde algún dato en particular muy rara vez cambiará. 
@@ -159,7 +159,7 @@ Automatizar los test unitarios y poder trabajar con ellos nos ofrece iniciar las
 
 El propósito del desarrollo guiado por pruebas es lograr un código limpio que funcione. La idea es que los requisitos sean traducidos a pruebas, de este modo, cuando las pruebas pasen se garantizará que el software cumple con los requisitos que se han establecido.
 
-Puedes ver este ejemplo en contactos.js, donde primero se hizo los test y luego se hizo una implementación que además presneta distintas alternativas.
+Puedes ver este ejemplo en contactos.js, donde primero se hizo los test y luego se hizo una implementación que además presenta distintas alternativas.
 
 ## Mocks en TDD
 También podemos hacer uso de Mocks para crear los test desde el comienzo y saber si están correctos y con estos mock posteriormente crear nuestro código que lo paso. Puedes verlo en el fichero mocks.
