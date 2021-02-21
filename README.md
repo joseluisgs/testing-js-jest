@@ -148,7 +148,7 @@ Una vez ejecutado el test con snapshot, este nos creara una carpeta con el nombr
 Si queremos crear una excepción, añadiremos las excepciones dentro del método .toMatchSnapshot(). Es importante que cuando ejecutemos el test con las excepciones usemos el flag -u para que use los nuevo cambios si ya existiese una captura previa.
 
 # Principios del TDD
-Automatizar los test unitarios y poder trabajar con ellos nos ofrece iniciar las bases del [TDD (Test-Driven Development)](https://www.paradigmadigital.com/dev/tdd-como-metodologia-de-diseno-de-software/). Para ello: 
+Automatizar los test unitarios y poder trabajar con ellos nos ofrece iniciar las bases del [TDD (Test-Driven Development)](https://uniwebsidad.com/libros/tdd). Para ello: 
 - Crea el test
 - Comprueba que falla
 - Escribe el código justo para pasarlo
@@ -162,7 +162,7 @@ El propósito del desarrollo guiado por pruebas es lograr un código limpio que 
 Puedes ver este ejemplo en contactos.js, donde primero se hizo los test y luego se hizo una implementación que además presenta distintas alternativas.
 
 ## Mocks en TDD
-También podemos hacer uso de Mocks para crear los test desde el comienzo y saber si están correctos y con estos mock posteriormente crear nuestro código que lo paso. Puedes verlo en el fichero mocks.
+También podemos hacer uso de Mocks para crear los test desde el comienzo y saber si están correctos y con estos mock posteriormente crear nuestro código que lo paso. Recuerda que un Mock es un objeto pre-programado con expectativas que conforman la especificación de cómo se espera que se reciban las llamadas. Puedes verlo en el fichero mocks.
 
 # Autor
 
