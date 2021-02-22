@@ -79,6 +79,7 @@ describe('Componente TheHeader.vue', () => {
     });
   });
 
+  // podemos montar propiedades con propsData
   describe('Montamos los componentes modificando las propiedades', () => {
     test('Mount Parent con las nuevas propiedades usando propsData', () => {
       const wrapperMount = mount(ParentComponent, {
@@ -90,6 +91,7 @@ describe('Componente TheHeader.vue', () => {
     });
   });
 
+  // Podemos moetar propiedades con setProps, pero es async/await
   describe('Montamos los componentes modificando las propiedades', () => {
     it('Mount Parent usando setProps', async () => {
       const wrapperMount = mount(ParentComponent);
