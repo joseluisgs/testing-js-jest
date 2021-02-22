@@ -39,6 +39,7 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
   - [Test sobre las propiedades](#test-sobre-las-propiedades)
   - [Test sobre propiedades computadas](#test-sobre-propiedades-computadas)
   - [Testeando Métodos y Eventos](#testeando-métodos-y-eventos)
+  - [Ejemplo](#ejemplo)
 - [Autor](#autor)
   - [Licencia](#licencia)
     - [Agradecimientos](#agradecimientos)
@@ -189,13 +190,15 @@ E iremos apliacando TDD. Puedes seguir el proyecto commit a commit.
 ## Montando componentes
 Para realizar el montaje del componente para nuestra prueba usando la siguiente linea: const wrapper = mount(XXXX), Siendo XXXX El componente a montar.
 
-En este momento si pasamos el test se mostrara como correcto, pero es que realmente todavía no hemos realizado ninguna comprobación. Para que los test puedan comprobar el funcionamiento necesitamos realizar una afirmación (assertions, en jest es expect) y aplicarle un match.
+En este momento si pasamos el test se mostrará como correcto, pero es que realmente todavía no hemos realizado ninguna comprobación. Para que los test puedan comprobar el funcionamiento necesitamos realizar una afirmación (assertions, en jest es expect) y aplicarle un match.
 
 Debemos tener en cuenta que podemos montar los componentes de distintas maneras:
 - shallowMount: Monta el componente sin sus hijos.
 - mount: Monta el componente con sus hijos.
 
 De esta manera tenemos el Wrapper de nuestro componente y podemos trabajar con él siguiendo la [guía de testing](https://vue-test-utils.vuejs.org/api/wrapper/#properties). De hecho dentro del objeto vm podemos acceder a todos los datos y funcionalidad del componente.
+
+Debemos destacar que wrapper es un mock de la instancia de Vue.
 
 Si nos fijamos, podemos ver que el Padre que contiene un hijo cuando usamos shallowMount nos ha montado una especie de componente “falso” (<child-component-stub></child-component-stub>) que sustituye al real. Esto nos puede resultar muy útil cuando necesitamos aislar los test que tenemos que realizar sobre el padre y no necesitamos a sus hijos.
 
@@ -209,6 +212,9 @@ Los test sobre las propiedades computadas son muy sencillos, ya que únicamente 
 
 ## Testeando Métodos y Eventos
 Los eventos de un componente pueden llamar a métodos, para ello los llamamos igual que un método normal y comprobamos los resultados, o llamamos con el método trigger al evento disparado.
+
+## Ejemplo
+Un ejemplo de todo lo visto puedes verlo en Final.vue y su test.
 
 # Autor
 
