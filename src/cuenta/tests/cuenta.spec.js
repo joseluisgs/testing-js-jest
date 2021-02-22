@@ -63,4 +63,6 @@ describe('TDD Cuenta', () => {
     cuenta.ingresar(6000.01);
     expect(cuenta.getSaldo()).toBe(0);
   });
+
+  // Te tocaría hacer los test de retiradas e ingresos 😊 💪
 });
