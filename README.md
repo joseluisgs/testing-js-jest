@@ -33,6 +33,8 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
   - [Ejemplo Contactos](#ejemplo-contactos)
   - [Ejemplo Cuenta](#ejemplo-cuenta)
   - [Mocks en TDD](#mocks-en-tdd)
+- [Testeando un Framework: Vue.js](#testeando-un-framework-vuejs)
+  - [Testear en Vue.js](#testear-en-vuejs)
 - [Autor](#autor)
   - [Licencia](#licencia)
     - [Agradecimientos](#agradecimientos)
@@ -169,6 +171,17 @@ Además puedes seguir el ejemplo en src/cuenta donde se ha desarrollado un ejemp
 
 ## Mocks en TDD
 También podemos hacer uso de Mocks para crear los test desde el comienzo y saber si están correctos y con estos mock posteriormente crear nuestro código que lo paso. Recuerda que un Mock es un objeto pre-programado con expectativas que conforman la especificación de cómo se espera que se reciban las llamadas. Puedes verlo en el fichero mocks.
+
+# Testeando un Framework: Vue.js
+En este caso vamos a ver como testear un Framework. Es importante remarcar que cada Framework tiene sus propias particularidades y debemos leer bien su docuemntación de como hacerlo. En nuestro caso usaremos [Vue.js](https://vuejs.org/) y su suite de herramientas de testeo que ussan Jest, concidas como [Vue Test Utils](https://vue-test-utils.vuejs.org/). Hemos usado como ejemplo el proyecto en src/vue-testing.
+
+## Testear en Vue.js
+Nos centraremos en ejecutar el comando test:unit para ejecutar nuestros test unitarios
+```bash
+npm run test:unit
+```
+E iremos apliacando TDD. Puedes seguir el proyecto commit a commit.
+
 
 # Autor
 
