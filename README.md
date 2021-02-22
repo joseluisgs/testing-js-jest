@@ -188,6 +188,11 @@ Para realizar el montaje del componente para nuestra prueba usando la siguiente 
 
 En este momento si pasamos el test se mostrara como correcto, pero es que realmente todavía no hemos realizado ninguna comprobación. Para que los test puedan comprobar el funcionamiento necesitamos realizar una afirmación (assertions, en jest es expect) y aplicarle un match.
 
+Debemos tener en cuenta que podemos montar los componentes de distintas maneras:
+- shallowMount: Monta el componente sin sus hijos.
+- mount: Monta el componente con sus hijos.
+
+De esta manera tenemos el Wrapper de nuestro componente y podemos trabajar con él siguiendo la [guía de testing](https://vue-test-utils.vuejs.org/api/wrapper/#properties).
 
 # Autor
 

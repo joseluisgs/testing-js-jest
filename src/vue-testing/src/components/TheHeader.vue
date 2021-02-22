@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  name: 'the-header',
+  name: 'TheHeader',
   props: {
     title: {
       type: String,

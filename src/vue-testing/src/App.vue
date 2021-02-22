@@ -1,22 +1,13 @@
 <template>
   <div id="app">
-    <TheHeader title="Welcome to Your Vue.js App" />
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
     <router-view/>
   </div>
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader.vue';
 
 export default {
   name: 'Home',
-  components: {
-    TheHeader,
-  },
 };
 </script>
 <style>
