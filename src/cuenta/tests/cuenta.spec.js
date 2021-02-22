@@ -14,4 +14,10 @@ describe('TDD Cuenta', () => {
     cuenta.ingresar(100);
     expect(cuenta.getSaldo()).toBe(100);
   });
+
+  test('Cuenta: Al ingresar 3000 en cuenta vacía el saldo es 3000', () => {
+    const cuenta = new Cuenta();
+    cuenta.ingresar(3000);
+    expect(cuenta.getSaldo()).toBe(3000);
+  });
 });
