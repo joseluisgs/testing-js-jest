@@ -29,7 +29,10 @@ class Cuenta {
    * en producción, el cliente lo detectará y tendremos un bug que corregir. Y lo corregiremos siguiendo la técnica TDD.
    */
   ingresar(cantidad) {
-    if (cantidad < 0) {
+    // eslint-disable-next-line eqeqeq
+    if (cantidad.toFixed(2) != cantidad) {
+      this.saldo = 0;
+    } else if (cantidad < 0) {
       this.saldo = 0;
     } else {
       this.saldo += cantidad;
