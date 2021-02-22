@@ -29,16 +29,30 @@ class Cuenta {
    * en producción, el cliente lo detectará y tendremos un bug que corregir. Y lo corregiremos siguiendo la técnica TDD.
    */
   ingresar(cantidad) {
+    const esValida = this.validarCantidadIngresada(cantidad);
+    if (esValida) {
+      this.saldo += cantidad;
+    } else {
+      this.saldo = 0;
+    }
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  validarCantidadIngresada(cantidad) {
     // eslint-disable-next-line eqeqeq
     if (cantidad.toFixed(2) != cantidad) {
-      this.saldo = 0;
-    } else if (cantidad > 6000.00) {
-      this.saldo = 0;
-    } else if (cantidad < 0) {
-      this.saldo = 0;
-    } else {
-      this.saldo += cantidad;
+      return false;
     }
+
+    if (cantidad < 0) {
+      return false;
+    }
+
+    if (cantidad > 6000.00) {
+      return false;
+    }
+
+    return true;
   }
 }
 
