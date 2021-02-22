@@ -117,10 +117,18 @@ describe('Componente TheHeader.vue', () => {
 
   // Testeando eventos y métodos
   describe('Testeando Métodos y eventos', () => {
-    const wrapper = shallowMount(Post);
-    test('Cambia el título cuando el boton es pulsado', () => {
+    test('Cambia el título cuando el boton es pulsado por métodos', () => {
+      const wrapper = shallowMount(Post);
       expect(wrapper.vm.title).toBe('Hola'); // valor inicial del data title
       wrapper.vm.changeTitle();  // llamamos al método
+      expect(wrapper.vm.title).toBe('Adiós'); // Valor final
+    })
+
+    test('Cambia el título cuando el boton es pulsado por eventos', () => {
+      const wrapper = shallowMount(Post);
+      expect(wrapper.vm.title).toBe('Hola'); // valor inicial del data title
+      const button = wrapper.find('button'); // Tomamos el botón
+      button.trigger('click'); // Disparamos su evento
       expect(wrapper.vm.title).toBe('Adiós'); // Valor final
     })
 
