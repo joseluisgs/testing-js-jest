@@ -1,8 +1,9 @@
 # Testing JS con JEST
 
-Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librería JEST.
+Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScript y Vue.js. 
 
 [![Jest](https://img.shields.io/badge/JS%20Test-Jest-red)](https://jestjs.io/docs/es-ES/getting-started)
+[![Vue Ready](https://img.shields.io/badge/Vue.js-%20Ready-%2342b983)](https://es.vuejs.org/)
 [![JS Code](https://img.shields.io/badge/JS%20Code-ES2019-yellow)](https://www.ecma-international.org/ecma-262)
 [![JS Style](https://img.shields.io/badge/JS%20Style-AirBnB-ff69b4)](https://airbnb.io/javascript)
 [![Licence](https://img.shields.io/github/license/joseluisgs/testing-js-jest)](https://github.com/joseluisgs/testing-js-jest/blob/main/LICENSE)
@@ -45,7 +46,7 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
     - [Agradecimientos](#agradecimientos)
 
 ## Acerca de
-Conjunto de códigos con el objetivo de introducir la suite de test [Jest](https://jestjs.io/docs/es-ES/getting-started) y mostrar como realizar test unitarios.
+Conjunto de códigos con el objetivo de introducir la suite de test [Jest](https://jestjs.io/docs/es-ES/getting-started) y mostrar como realizar test unitarios y TDD sobre JavaScript y sobre Vue.js.
 
 # Instalación
 Es importante seguir la [documentación oficial](https://jestjs.io/docs/es-ES/getting-started). 
