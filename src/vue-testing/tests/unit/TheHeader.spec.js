@@ -40,6 +40,19 @@ describe('Componente TheHeader.vue', () => {
     expect(wrapper.html().includes(title)).toBeTruthy();
   });
 
+  // Otra forma de comprobar si se ha pintado o exixte es usando refs
+  test('El componente se ha pintado', () => {
+    const wrapper = mount(TheHeader);
+    expect(wrapper.vm.$refs.menu).not.toBeUndefined();
+  });
+
+  // Otra forma de añadirle una propiedad es con setProps, pero es asíncorno
+  test('Comprobamos que el título se esta pintando', async () => {
+    const wrapper = mount(TheHeader);
+    await wrapper.setProps({ title: 'Menú APP' });
+    expect(wrapper.html().includes('Menú APP')).toBeTruthy();
+  });
+
   // y todo lo que puedas imaginar
 
   describe('Probamos las dos formas de montar componentes', () => {
@@ -53,7 +66,7 @@ describe('Componente TheHeader.vue', () => {
       console.log(wrapperShallowMount.html());
       console.log('----------------------');
     });
-    
+
     describe('Comprobamos el componente padre', () => {
       const wrapperMount = mount(ParentComponent);
       const wrapperShallowMount = shallowMount(ParentComponent);
@@ -63,6 +76,17 @@ describe('Componente TheHeader.vue', () => {
       console.log('---- shallowMount ----');
       console.log(wrapperShallowMount.html());
       console.log('----------------------');
+    });
+  });
+
+  describe('Montamos los componentes modificando las propiedades', () => {
+    test('Mount Parent con las nuevas propiedades usando propsData', () => {
+      const wrapperMount = mount(ParentComponent, {
+        propsData: {
+          message: 'Mensaje prueba jest / vue-test-utils',
+        },
+      });
+      expect(wrapperMount.find('ul li:nth-of-type(2)').text()).toBe('message: Mensaje prueba jest / vue-test-utils');
     });
   });
 });

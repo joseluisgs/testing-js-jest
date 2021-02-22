@@ -36,6 +36,7 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
 - [Testeando un Framework: Vue.js](#testeando-un-framework-vuejs)
   - [Testear en Vue.js](#testear-en-vuejs)
   - [Montando componentes](#montando-componentes)
+  - [Test sobre las propiedades](#test-sobre-las-propiedades)
 - [Autor](#autor)
   - [Licencia](#licencia)
     - [Agradecimientos](#agradecimientos)
@@ -196,6 +197,10 @@ De esta manera tenemos el Wrapper de nuestro componente y podemos trabajar con �
 
 Si nos fijamos, podemos ver que el Padre que contiene un hijo cuando usamos shallowMount nos ha montado una especie de componente “falso” (<child-component-stub></child-component-stub>) que sustituye al real. Esto nos puede resultar muy útil cuando necesitamos aislar los test que tenemos que realizar sobre el padre y no necesitamos a sus hijos.
 
+## Test sobre las propiedades
+Para realizar los test sobre las propiedades de nuestro componentes, vue-test-utils ofrece tanto para mount como shallowMount un segundo parámetro llamado propsData.
+
+Ademas de propsData, también podemos usar setProps para añadir propiedades.
 
 # Autor
 

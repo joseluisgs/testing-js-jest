@@ -21,5 +21,15 @@ export default {
     ChildComponent,
     ParentComponent,
   },
+
+  data: () => ({
+    valueParent: '',
+  }),
 };
 </script>
+
+<style lang="css" scoped>
+  .home {
+    margin: 10px;
+  }
+</style>

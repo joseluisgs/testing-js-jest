@@ -1,5 +1,5 @@
 <template>
-  <nav class="menu">
+  <nav class="menu" ref="menu">
     <ul>
       <li class="selected"><a href="#">Home</a></li>
       <li class="selected"><a href="#">About</a></li>
