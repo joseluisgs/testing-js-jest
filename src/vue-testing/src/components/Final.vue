@@ -2,7 +2,7 @@
   <div id="final">
       <div>
         <h3>Testeando tu habilidad matemática.</h3>
-        <p>¿Cual es la suma de estos números?</p>
+        <p>¿Cuál es la suma de estos números?</p>
         <div class="inline">
           <p>{{ x1 }} + {{ x2 }} =</p>
           <input v-model="guess"> <button v-on:click="check">Comprobar respuesta</button>
@@ -30,9 +30,9 @@ export default {
     // Comprueba
     check() {
       if (this.x1 + this.x2 === parseInt(this.guess, 10)) {
-        this.message = '¡HAS ACERTADO!';
+        this.message = '¡HAS ACERTADO! 😁';
       } else {
-        this.message = '¡INTÉNTALO OTRA VEZ!';
+        this.message = '¡INTÉNTALO OTRA VEZ! 🤨';
       }
     },
 
