@@ -6,12 +6,12 @@ import Cuenta from '../cuenta';
 describe('TDD Cuenta', () => {
   let cuenta;
   beforeAll(() => {
-    console.log('Antes de cada prueba Creamos el Arrange Global');
-    console.log(' No tenemos nunguno por ahora');
+    // console.log('Antes de cada prueba Creamos el Arrange Global');
+    // console.log(' No tenemos nunguno por ahora');
   });
 
   beforeEach(() => {
-    console.log('Antes de cada prueba');
+    // console.log('Antes de cada prueba');
     cuenta = new Cuenta();
   });
 
@@ -33,11 +33,14 @@ describe('TDD Cuenta', () => {
   test('Cuenta: Al ingresar 3000 en cuenta con 100 el saldo es 3100', () => {
     // Arrange (set up)
     cuenta.ingresar(100);
-
     // Act
     cuenta.ingresar(3000);
-
     // Assert
     expect(cuenta.getSaldo()).toBe(3100);
+  });
+
+  test('Cuenta: Al ingresar -100 en cuenta vacía, el saldo sigue siendo 0', () => {
+    cuenta.ingresar(-100);
+    expect(cuenta.getSaldo()).toBe(0);
   });
 });
