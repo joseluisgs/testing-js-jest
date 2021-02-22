@@ -6,6 +6,10 @@ class Cuenta {
   getSaldo() {
     return this.saldo;
   }
+
+  ingresar(cantidad) {
+    this.saldo = cantidad;
+  }
 }
 
 export default Cuenta;
