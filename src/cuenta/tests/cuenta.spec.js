@@ -115,6 +115,13 @@ describe('TDD Cuenta', () => {
       expect(cuenta.getSaldo()).toBe(899.55);
     });
 
+    test('Cuenta: Retirada con más de dos decimales', () => {
+      cuenta.ingresar(1000);
+      expect(cuenta.getSaldo()).toBe(1000);
+      cuenta.retirar(100.451);
+      expect(cuenta.getSaldo()).toBe(1000);
+    });
+
     test('Cuenta: No se puede retirar una cantidad negativa', () => {
       cuenta.ingresar(500);
       expect(cuenta.getSaldo()).toBe(500);

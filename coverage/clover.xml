@@ -1,73 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1613815664465" clover="3.2.0">
-  <project timestamp="1613815664465" name="All files">
-    <metrics statements="40" coveredstatements="40" conditionals="7" coveredconditionals="7" methods="26" coveredmethods="26" elements="73" coveredelements="73" complexity="0" loc="40" ncloc="40" packages="1" files="9" classes="9"/>
-    <file name="arrays.js" path="/home/informatica/Proyectos/testing-js/src/arrays.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-    </file>
-    <file name="asincronia.js" path="/home/informatica/Proyectos/testing-js/src/asincronia.js">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="10" count="6" type="stmt"/>
-      <line num="11" count="6" type="stmt"/>
-      <line num="12" count="4" type="stmt"/>
-      <line num="13" count="2" type="stmt"/>
-    </file>
-    <file name="boolean.js" path="/home/informatica/Proyectos/testing-js/src/boolean.js">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-    </file>
-    <file name="contactos.js" path="/home/informatica/Proyectos/testing-js/src/contactos.js">
-      <metrics statements="14" coveredstatements="14" conditionals="7" coveredconditionals="7" methods="9" coveredmethods="9"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="14" count="8" type="cond" truecount="2" falsecount="0"/>
-      <line num="22" count="7" type="stmt"/>
-      <line num="24" count="1" type="stmt"/>
-      <line num="34" count="2" type="stmt"/>
-      <line num="35" count="6" type="stmt"/>
-      <line num="36" count="4" type="stmt"/>
-      <line num="41" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="43" count="1" type="stmt"/>
-      <line num="56" count="4" type="stmt"/>
-      <line num="63" count="3" type="stmt"/>
-      <line num="74" count="2" type="stmt"/>
-      <line num="75" count="1" type="stmt"/>
-      <line num="76" count="1" type="stmt"/>
-    </file>
-    <file name="funciones.js" path="/home/informatica/Proyectos/testing-js/src/funciones.js">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <line num="3" count="2" type="stmt"/>
-      <line num="4" count="3" type="stmt"/>
-      <line num="5" count="2" type="stmt"/>
-      <line num="6" count="2" type="stmt"/>
-    </file>
-    <file name="persona.js" path="/home/informatica/Proyectos/testing-js/src/persona.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-    </file>
-    <file name="snapshot.js" path="/home/informatica/Proyectos/testing-js/src/snapshot.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-    </file>
-    <file name="strings.js" path="/home/informatica/Proyectos/testing-js/src/strings.js">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-    </file>
-    <file name="todolist.js" path="/home/informatica/Proyectos/testing-js/src/todolist.js">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="10" count="1" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
-      <line num="14" count="1" type="stmt"/>
-      <line num="18" count="1" type="stmt"/>
-    </file>
+<coverage generated="1614000066563" clover="3.2.0">
+  <project timestamp="1614000066563" name="All files">
+    <metrics statements="75" coveredstatements="75" conditionals="33" coveredconditionals="33" methods="34" coveredmethods="34" elements="142" coveredelements="142" complexity="0" loc="75" ncloc="75" packages="2" files="10" classes="10"/>
+    <package name="src">
+      <metrics statements="40" coveredstatements="40" conditionals="7" coveredconditionals="7" methods="26" coveredmethods="26"/>
+      <file name="arrays.js" path="/home/informatica/Proyectos/testing-js/src/arrays.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="asincronia.js" path="/home/informatica/Proyectos/testing-js/src/asincronia.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+      </file>
+      <file name="boolean.js" path="/home/informatica/Proyectos/testing-js/src/boolean.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="contactos.js" path="/home/informatica/Proyectos/testing-js/src/contactos.js">
+        <metrics statements="14" coveredstatements="14" conditionals="7" coveredconditionals="7" methods="9" coveredmethods="9"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="14" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="6" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="41" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="56" count="4" type="stmt"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+      </file>
+      <file name="funciones.js" path="/home/informatica/Proyectos/testing-js/src/funciones.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+      <file name="persona.js" path="/home/informatica/Proyectos/testing-js/src/persona.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="snapshot.js" path="/home/informatica/Proyectos/testing-js/src/snapshot.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="strings.js" path="/home/informatica/Proyectos/testing-js/src/strings.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="todolist.js" path="/home/informatica/Proyectos/testing-js/src/todolist.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.cuenta">
+      <metrics statements="35" coveredstatements="35" conditionals="26" coveredconditionals="26" methods="8" coveredmethods="8"/>
+      <file name="cuenta.js" path="/home/informatica/Proyectos/testing-js/src/cuenta/cuenta.js">
+        <metrics statements="35" coveredstatements="35" conditionals="26" coveredconditionals="26" methods="8" coveredmethods="8"/>
+        <line num="9" count="28" type="stmt"/>
+        <line num="16" count="30" type="stmt"/>
+        <line num="24" count="27" type="stmt"/>
+        <line num="25" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="23" type="stmt"/>
+        <line num="37" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="41" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="45" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="49" count="23" type="stmt"/>
+        <line num="57" count="7" type="stmt"/>
+        <line num="58" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="59" count="3" type="stmt"/>
+        <line num="69" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="73" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="77" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="81" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="82" count="1" type="stmt"/>
+        <line num="85" count="3" type="stmt"/>
+        <line num="94" count="4" type="stmt"/>
+        <line num="95" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="96" count="1" type="stmt"/>
+        <line num="97" count="1" type="stmt"/>
+        <line num="106" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="107" count="1" type="stmt"/>
+        <line num="110" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="111" count="1" type="stmt"/>
+        <line num="114" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="115" count="1" type="stmt"/>
+        <line num="118" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
