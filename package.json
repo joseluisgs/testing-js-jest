@@ -10,10 +10,10 @@
     "fix": "eslint --fix 'src/**/*.js'",
     "watch": "nodemon",
     "build": "babel src -d dist",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watchAll",
-    "test:coverage-all": "jest --coverage --watchAll"
+    "test": "jest tests/*",
+    "test:coverage": "jest tests/* --coverage",
+    "test:watch": "jest tests/* --watchAll",
+    "test:coverage-all": "jest tests/* --coverage --watchAll"
   },
   "keywords": [],
   "author": "",
