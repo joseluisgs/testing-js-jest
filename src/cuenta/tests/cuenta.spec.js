@@ -88,4 +88,42 @@ describe('TDD Cuenta', () => {
     // Asert
     expect(cuenta.getSaldo()).toBe(2350);
   });
+
+  // Faltan muchos, pero te m uestro algunos importantes. Deben estar todos
+  test('Cuenta: Al retirar 100 en una cuenta con 500 el sado es 400', () => {
+    cuenta.ingresar(500);
+    expect(cuenta.getSaldo()).toBe(500);
+    cuenta.retirar(100);
+    expect(cuenta.getSaldo()).toBe(400);
+  });
+
+  test('Cuenta: No se puede retirar más del saldo disponible', () => {
+    cuenta.ingresar(200);
+    expect(cuenta.getSaldo()).toBe(200);
+    cuenta.retirar(500);
+    expect(cuenta.getSaldo()).toBe(200);
+  });
+
+  test('Cuenta: Retirada con dos decimales', () => {
+    cuenta.ingresar(1000);
+    expect(cuenta.getSaldo()).toBe(1000);
+    cuenta.retirar(100.45);
+    expect(cuenta.getSaldo()).toBe(899.55);
+  });
+
+  test('Cuenta: No se puede retirar una cantidad negativa', () => {
+    cuenta.ingresar(500);
+    expect(cuenta.getSaldo()).toBe(500);
+    cuenta.retirar(-100);
+    expect(cuenta.getSaldo()).toBe(500);
+  });
+
+  test('Cuenta: No se puede retirar mas de 6000', () => {
+    cuenta.ingresar(3000);
+    cuenta.ingresar(4000);
+    expect(cuenta.getSaldo()).toBe(7000);
+    // Valores límite
+    cuenta.retirar(6000.01);
+    expect(cuenta.getSaldo()).toBe(7000);
+  });
 });
