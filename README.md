@@ -208,7 +208,7 @@ Ademas de propsData, también podemos usar setProps para añadir propiedades (Pe
 Los test sobre las propiedades computadas son muy sencillos, ya que únicamente deberemos llamarlas como lo haríamos en nuestro código.
 
 ## Testeando Métodos y Eventos
-Los eventos de un componente pueden llamar a métodos, para ello los llamamos igual que un método normal y comprobamos los resultados.
+Los eventos de un componente pueden llamar a métodos, para ello los llamamos igual que un método normal y comprobamos los resultados, o llamamos con el método trigger al evento disparado.
 
 # Autor
 

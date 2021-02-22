@@ -4,7 +4,7 @@ import { mount, shallowMount } from '@vue/test-utils';
 import TheHeader from '@/components/TheHeader.vue';
 import ChildComponent from '@/components/Child.vue';
 import ParentComponent from '@/components/Parent.vue';
-import Post from '@/components/Events.vue'
+import Post from '@/components/Events.vue';
 
 // Definimos de que se trata la prueba
 describe('Componente TheHeader.vue', () => {
@@ -120,9 +120,9 @@ describe('Componente TheHeader.vue', () => {
     test('Cambia el título cuando el boton es pulsado por métodos', () => {
       const wrapper = shallowMount(Post);
       expect(wrapper.vm.title).toBe('Hola'); // valor inicial del data title
-      wrapper.vm.changeTitle();  // llamamos al método
+      wrapper.vm.changeTitle(); // llamamos al método
       expect(wrapper.vm.title).toBe('Adiós'); // Valor final
-    })
+    });
 
     test('Cambia el título cuando el boton es pulsado por eventos', () => {
       const wrapper = shallowMount(Post);
@@ -130,7 +130,6 @@ describe('Componente TheHeader.vue', () => {
       const button = wrapper.find('button'); // Tomamos el botón
       button.trigger('click'); // Disparamos su evento
       expect(wrapper.vm.title).toBe('Adiós'); // Valor final
-    })
-
-  })
+    });
+  });
 });
