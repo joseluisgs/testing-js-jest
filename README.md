@@ -35,6 +35,7 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
   - [Mocks en TDD](#mocks-en-tdd)
 - [Testeando un Framework: Vue.js](#testeando-un-framework-vuejs)
   - [Testear en Vue.js](#testear-en-vuejs)
+  - [Montando componentes](#montando-componentes)
 - [Autor](#autor)
   - [Licencia](#licencia)
     - [Agradecimientos](#agradecimientos)
@@ -181,6 +182,11 @@ Nos centraremos en ejecutar el comando test:unit para ejecutar nuestros test uni
 npm run test:unit
 ```
 E iremos apliacando TDD. Puedes seguir el proyecto commit a commit.
+
+## Montando componentes
+Para realizar el montaje del componente para nuestra prueba usando la siguiente linea: const wrapper = mount(XXXX), Siendo XXXX El componente a montar.
+
+En este momento si pasamos el test se mostrara como correcto, pero es que realmente todavía no hemos realizado ninguna comprobación. Para que los test puedan comprobar el funcionamiento necesitamos realizar una afirmación (assertions, en jest es expect) y aplicarle un match.
 
 
 # Autor
