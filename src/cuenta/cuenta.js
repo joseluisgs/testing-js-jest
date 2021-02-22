@@ -32,6 +32,8 @@ class Cuenta {
     // eslint-disable-next-line eqeqeq
     if (cantidad.toFixed(2) != cantidad) {
       this.saldo = 0;
+    } else if (cantidad > 6000.00) {
+      this.saldo = 0;
     } else if (cantidad < 0) {
       this.saldo = 0;
     } else {

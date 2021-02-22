@@ -60,7 +60,7 @@ describe('TDD Cuenta', () => {
   });
 
   test('Cuenta: Si ingreso 6000.01 en una cuenta vacía, el saldo es de 0', () => {
-    cuenta.ingresar(6000.00);
+    cuenta.ingresar(6000.01);
     expect(cuenta.getSaldo()).toBe(0);
   });
 });
