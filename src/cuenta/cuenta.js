@@ -21,7 +21,7 @@ class Cuenta {
    * @param {number} cantidad
    */
   ingresar(cantidad) {
-    this.saldo = cantidad;
+    this.saldo += cantidad;
   }
 }
 
