@@ -30,6 +30,8 @@ Conjunto de ejemplos para realizar test unitarios en JavaScript usando la librer
 - [Testing DOM](#testing-dom)
 - [Snapshot testing](#snapshot-testing)
 - [Principios del TDD](#principios-del-tdd)
+  - [Ejemplo Contactos](#ejemplo-contactos)
+  - [Ejemplo Cuenta](#ejemplo-cuenta)
   - [Mocks en TDD](#mocks-en-tdd)
 - [Autor](#autor)
   - [Licencia](#licencia)
@@ -159,7 +161,11 @@ Automatizar los test unitarios y poder trabajar con ellos nos ofrece iniciar las
 
 El propósito del desarrollo guiado por pruebas es lograr un código limpio que funcione. La idea es que los requisitos sean traducidos a pruebas, de este modo, cuando las pruebas pasen se garantizará que el software cumple con los requisitos que se han establecido.
 
+## Ejemplo Contactos
 Puedes ver este ejemplo en contactos.js, donde primero se hizo los test y luego se hizo una implementación que además presenta distintas alternativas.
+
+## Ejemplo Cuenta
+Además puedes seguir el ejemplo en src/cuenta donde se ha desarrollado un ejemplo completo siguoendo TDD y ATDD donde puede seguirlo commit a commit.
 
 ## Mocks en TDD
 También podemos hacer uso de Mocks para crear los test desde el comienzo y saber si están correctos y con estos mock posteriormente crear nuestro código que lo paso. Recuerda que un Mock es un objeto pre-programado con expectativas que conforman la especificación de cómo se espera que se reciban las llamadas. Puedes verlo en el fichero mocks.
