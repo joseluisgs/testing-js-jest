@@ -119,4 +119,6 @@ class Cuenta {
   }
 }
 
+// Mejoras: Lanzar excepciones y capturarlas en los test
+
 export default Cuenta;

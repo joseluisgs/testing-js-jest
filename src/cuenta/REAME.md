@@ -12,4 +12,4 @@ Imaginémonos que tenemos la oportunidad de entrevistarnos con el cliente para d
 Evidentemente, los detalles los conoce el cliente, y no nosotros, así que para este ejercicio, nosotros mismos haremos también de cliente, dialogando con nosotros mismos hasta tener la lista de especificaciones ATDD completa.
 
 ### Agradecimientos
-Este supuesto prático está desarrollado siguiendo este curso de [TDD](https://openwebinars.net/academia/portada/test-driven-development/).
+Este supuesto prático está desarrollado siguiendo este curso de [TDD](https://openwebinars.net/academia/portada/test-driven-development/) y en su [GitHub para PHP](https://github.com/OpenWebinarsNet/curso_tdd).
