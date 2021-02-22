@@ -194,6 +194,9 @@ Debemos tener en cuenta que podemos montar los componentes de distintas maneras:
 
 De esta manera tenemos el Wrapper de nuestro componente y podemos trabajar con él siguiendo la [guía de testing](https://vue-test-utils.vuejs.org/api/wrapper/#properties).
 
+Si nos fijamos, podemos ver que el Padre que contiene un hijo cuando usamos shallowMount nos ha montado una especie de componente “falso” (<child-component-stub></child-component-stub>) que sustituye al real. Esto nos puede resultar muy útil cuando necesitamos aislar los test que tenemos que realizar sobre el padre y no necesitamos a sus hijos.
+
+
 # Autor
 
 Codificado con :sparkling\_heart: por [José Luis González Sánchez](https://twitter.com/joseluisgonsan)
