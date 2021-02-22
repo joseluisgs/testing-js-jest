@@ -8,4 +8,10 @@ describe('TDD Cuenta', () => {
     const cuenta = new Cuenta();
     expect(cuenta.getSaldo()).toBe(0);
   });
+
+  test('Cuenta: Al ingresar 100 en cuenta vacía el saldo debería ser 0', () => {
+    const cuenta = new Cuenta();
+    cuenta.ingresar(100);
+    expect(cuenta.getSaldo()).toBe(100);
+  });
 });
