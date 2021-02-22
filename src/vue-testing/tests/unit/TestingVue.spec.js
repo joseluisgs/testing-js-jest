@@ -4,6 +4,7 @@ import { mount, shallowMount } from '@vue/test-utils';
 import TheHeader from '@/components/TheHeader.vue';
 import ChildComponent from '@/components/Child.vue';
 import ParentComponent from '@/components/Parent.vue';
+import Post from '@/components/Events.vue'
 
 // Definimos de que se trata la prueba
 describe('Componente TheHeader.vue', () => {
@@ -93,10 +94,35 @@ describe('Componente TheHeader.vue', () => {
 
   // Podemos moetar propiedades con setProps, pero es async/await
   describe('Montamos los componentes modificando las propiedades', () => {
-    it('Mount Parent usando setProps', async () => {
+    test('Mount Parent usando setProps', async () => {
       const wrapperMount = mount(ParentComponent);
       await wrapperMount.setProps({ message: 'Mensaje prueba jest / vue-test-utils' });
       expect(wrapperMount.find('ul li:nth-of-type(2)').text()).toBe('message: Mensaje prueba jest / vue-test-utils');
     });
   });
+
+  // Test sobre propiedades conputadas
+  describe('Probando las propiedades computadas', () => {
+    test('Probamos las propiedades computadas', async () => {
+      const wrapperMount = mount(ParentComponent);
+      expect(wrapperMount.find('ul li:nth-of-type(3)').text()).toBe('Propiedad computada:');
+
+      await wrapperMount.setProps({ message: 'vue-test-utils' });
+      expect(wrapperMount.find('ul li:nth-of-type(2)').text()).toBe('message: vue-test-utils');
+      expect(wrapperMount.find('ul li:nth-of-type(3)').text()).toBe('Propiedad computada: vue-test-utils');
+      // Propiedad computada que se llama propComputed
+      expect(wrapperMount.vm.propComputed).toBe('Propiedad computada: vue-test-utils');
+    });
+  });
+
+  // Testeando eventos y métodos
+  describe('Testeando Métodos y eventos', () => {
+    const wrapper = shallowMount(Post);
+    test('Cambia el título cuando el boton es pulsado', () => {
+      expect(wrapper.vm.title).toBe('Hola'); // valor inicial del data title
+      wrapper.vm.changeTitle();  // llamamos al método
+      expect(wrapper.vm.title).toBe('Adiós'); // Valor final
+    })
+
+  })
 });

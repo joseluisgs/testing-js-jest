@@ -4,7 +4,9 @@
     <hr />
     <ChildComponent/>
     <hr />
-    <ParentComponent />
+    <ParentComponent message=" Soy Padre" />
+    <hr />
+    <Events />
   </div>
 </template>
 
@@ -13,6 +15,7 @@
 import TheHeader from '@/components/TheHeader.vue';
 import ChildComponent from '@/components/Child.vue';
 import ParentComponent from '@/components/Parent.vue';
+import Events from '@/components/Events.vue';
 
 export default {
   name: 'Home',
@@ -20,6 +23,7 @@ export default {
     TheHeader,
     ChildComponent,
     ParentComponent,
+    Events,
   },
 
   data: () => ({
