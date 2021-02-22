@@ -43,4 +43,14 @@ describe('TDD Cuenta', () => {
     cuenta.ingresar(-100);
     expect(cuenta.getSaldo()).toBe(0);
   });
+
+  test('Cuenta: Si ingreso 100.45 en una cuenta vacía, el saldo es de 100.45', () => {
+    cuenta.ingresar(100.45);
+    expect(cuenta.getSaldo()).toBe(100.45);
+  });
+
+  test('Cuenta: Si ingreso 100.457 en una cuenta vacía, el saldo es de 0', () => {
+    cuenta.ingresar(100.457);
+    expect(cuenta.getSaldo()).toBe(0);
+  });
 });
