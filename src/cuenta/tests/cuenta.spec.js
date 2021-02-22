@@ -22,9 +22,14 @@ describe('TDD Cuenta', () => {
   });
 
   test('Cuenta: Al ingresar 3000 en cuenta con 100 el saldo es 3100', () => {
+    // Arrange (set up)
     const cuenta = new Cuenta();
     cuenta.ingresar(100);
+
+    // Act
     cuenta.ingresar(3000);
+
+    // Assert
     expect(cuenta.getSaldo()).toBe(3100);
   });
 });
