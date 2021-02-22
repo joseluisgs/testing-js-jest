@@ -4,26 +4,34 @@
 import Cuenta from '../cuenta';
 
 describe('TDD Cuenta', () => {
+  let cuenta;
+  beforeAll(() => {
+    console.log('Antes de cada prueba Creamos el Arrange Global');
+    console.log(' No tenemos nunguno por ahora');
+  });
+
+  beforeEach(() => {
+    console.log('Antes de cada prueba');
+    cuenta = new Cuenta();
+  });
+
+  // Vamos a usar algunas cosas
   test('Cuenta: Al crear una cuenta el saldo debería ser cero', () => {
-    const cuenta = new Cuenta();
     expect(cuenta.getSaldo()).toBe(0);
   });
 
   test('Cuenta: Al ingresar 100 en cuenta vacía el saldo debería ser 0', () => {
-    const cuenta = new Cuenta();
     cuenta.ingresar(100);
     expect(cuenta.getSaldo()).toBe(100);
   });
 
   test('Cuenta: Al ingresar 3000 en cuenta vacía el saldo es 3000', () => {
-    const cuenta = new Cuenta();
     cuenta.ingresar(3000);
     expect(cuenta.getSaldo()).toBe(3000);
   });
 
   test('Cuenta: Al ingresar 3000 en cuenta con 100 el saldo es 3100', () => {
     // Arrange (set up)
-    const cuenta = new Cuenta();
     cuenta.ingresar(100);
 
     // Act
