@@ -89,4 +89,12 @@ describe('Componente TheHeader.vue', () => {
       expect(wrapperMount.find('ul li:nth-of-type(2)').text()).toBe('message: Mensaje prueba jest / vue-test-utils');
     });
   });
+
+  describe('Montamos los componentes modificando las propiedades', () => {
+    it('Mount Parent usando setProps', async () => {
+      const wrapperMount = mount(ParentComponent);
+      await wrapperMount.setProps({ message: 'Mensaje prueba jest / vue-test-utils' });
+      expect(wrapperMount.find('ul li:nth-of-type(2)').text()).toBe('message: Mensaje prueba jest / vue-test-utils');
+    });
+  });
 });
