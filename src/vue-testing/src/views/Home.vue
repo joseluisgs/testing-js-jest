@@ -9,6 +9,8 @@
     <Events />
     <hr />
     <Final />
+    <hr />
+     <ToDo />
   </div>
 </template>
 
@@ -19,6 +21,7 @@ import ChildComponent from '@/components/Child.vue';
 import ParentComponent from '@/components/Parent.vue';
 import Events from '@/components/Events.vue';
 import Final from '@/components/Final.vue';
+import ToDo from '@/components/ToDo.vue';
 
 export default {
   name: 'Home',
@@ -28,6 +31,7 @@ export default {
     ParentComponent,
     Events,
     Final,
+    ToDo,
   },
 
   data: () => ({
