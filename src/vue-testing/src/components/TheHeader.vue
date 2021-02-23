@@ -24,7 +24,7 @@ export default {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   ul {
     list-style: none;
-    background: #333;
+    background: rgb(51, 51, 51);
     display: flex;
     align-items: center;
     color: white;

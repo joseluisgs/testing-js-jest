@@ -40,7 +40,8 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
   - [Test sobre las propiedades](#test-sobre-las-propiedades)
   - [Test sobre propiedades computadas](#test-sobre-propiedades-computadas)
   - [Testeando Métodos y Eventos](#testeando-métodos-y-eventos)
-  - [Ejemplo](#ejemplo)
+  - [Accediendos a elementos del DOM o específicos](#accediendos-a-elementos-del-dom-o-específicos)
+  - [Ejemplos](#ejemplos)
 - [Autor](#autor)
   - [Licencia](#licencia)
     - [Agradecimientos](#agradecimientos)
@@ -214,9 +215,25 @@ Los test sobre las propiedades computadas son muy sencillos, ya que únicamente 
 ## Testeando Métodos y Eventos
 Los eventos de un componente pueden llamar a métodos, para ello los llamamos igual que un método normal y comprobamos los resultados, o llamamos con el método trigger al evento disparado.
 
-## Ejemplo
-Un ejemplo de todo lo visto puedes verlo en Final.vue y su test.
+## Accediendos a elementos del DOM o específicos
+Podemos acceder a cada elemento del componente usando la función find y usando el [selectores de CSS](https://vue-test-utils.vuejs.org/api/#selectors):
+- tag selectors (div, foo, bar)
+- class selectors (.foo, .bar)
+- attribute selectors ([foo], [foo="bar"])
+- id selectors (#foo, #bar)
+- pseudo selectors (div:first-of-type)
 
+En nuestro caso usaremos la pripiedad de vue [:data-testid para nombrar inequícamente](https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change) los elementos que querdamos/usaremos para testear y referenciarlos con el selector CSS. P
+
+
+
+## Ejemplos
+En el proyecto Vue que tienes, existen ejemplos de cada cosa indicada: 
+- HelloWorld y como testear un componente básico en example.spec.js.
+- TheHeader, Parent y Child en con TestingVue para ver las diferentes formas de testear a nivel básico y como hacer wrapper de los componentes.
+- Final.vue donde se testea propiedades, datos, eventos y métodos.
+- ToDo.vue, el cual nos sirve para testear un típico gestor de tareas y trabajar con selectores del tipo id, así como mock con Jest en vue. De hecho se ha hecho un mock de axios, de la manera que siempre que llamemos a una función que usa axios, se simula dicha funcion usando el mock, es decir, se simula su comportamiento con los datos que tenemos en la carpeta __mocks__. Jest recogerá automáticamente este archivo y mapeará las llamadas que se hace a la biblioteca axios por las llamadas a nuestro fichero en el test ahorrarnos el consumo de la API REST externa y mejorando el rendimienro de nuestros test.
+  
 # Autor
 
 Codificado con :sparkling\_heart: por [José Luis González Sánchez](https://twitter.com/joseluisgonsan)
