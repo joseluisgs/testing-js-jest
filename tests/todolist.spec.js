@@ -3,8 +3,8 @@
 // Testeado DOM
 
 // Testando DOM
-describe('testing-doom', () => {
-  test('Testea si ha añadido una tarea a la lista', () => {
+describe('testing-dom basico', () => {
+  test('Testea si ha añadido una tarea a la lista usando Vanilla JS', () => {
     // Obtenemos de la página web lo que necesitemos
     document.body.innerHTML = `<input id="newTodo" />
       <button id="addTodo">Añadir Tarea</button>
