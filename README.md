@@ -29,6 +29,7 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
 - [Testing asíncrono](#testing-asíncrono)
 - [Testing API REST](#testing-api-rest)
 - [Testing DOM](#testing-dom)
+  - [Jest-DOM](#jest-dom)
 - [Snapshot testing](#snapshot-testing)
 - [Principios del TDD](#principios-del-tdd)
   - [Ejemplo Contactos](#ejemplo-contactos)
@@ -147,7 +148,10 @@ Otra de las cosas que podemos hacer es testar nuestra propia API Rest o Api REST
 Para testear más rápido podemos usar ficheros mocks locales.
 
 # Testing DOM
-Podemos testar nuestro DOM con [Jest](https://jestjs.io/docs/es-ES/tutorial-jquery) usando Vanilla JS o JQuery, incluso podemos hacer uso de la librería [Jest-DOM](https://github.com/testing-library/jest-dom). Es recomendable que sepamos pasar la parte de la web y la lógica que queramos testear. Jest viene con jsdom que simula un entorno DOM como si estuviera en el navegador. Esto significa que cada API DOM que llamamos se puede observar de la misma manera que se observaría en un navegador.
+Podemos testar nuestro DOM con [Jest](https://jestjs.io/docs/es-ES/tutorial-jquery) usando Vanilla JS o JQuery, incluso podemos hacer uso de la librería [Jest-DOM](https://github.com/testing-library/jest-dom). Es recomendable que sepamos pasar la parte de la web y la lógica que queramos testear. Jest viene con jsdom que simula un entorno DOM como si estuviera en el navegador. Esto significa que cada API DOM que llamamos se puede observar de la misma manera que se observaría en un navegador. Un ejemplo de testear un ejemplo de DOM con Vanila JS lo tienes en todolist.js.
+
+## Jest-DOM 
+[Jest-DOM](https://github.com/testing-library/jest-dom) es una librería que extiende Jest para usarla para testar tus ampliaciones HTML con una serie de [Matchers](https://github.com/testing-library/jest-dom#custom-matchers) especializados para esta labor pos si queremos usarlo. 
 
 # Snapshot testing
 Los snapshots nos garantizan que no vaya a ocurrir algún cambio inesperado en nuestra UI. Comprobamos lo datos que tenemos con lo que estamos trayendo y que no deben de cambiar, ya que esto lo usamos para casos en donde algún dato en particular muy rara vez cambiará. 
