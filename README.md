@@ -191,7 +191,7 @@ Automatizar los test unitarios y poder trabajar con ellos nos ofrece iniciar las
 El propósito del desarrollo guiado por pruebas es lograr un código limpio que funcione. La idea es que los requisitos sean traducidos a pruebas, de este modo, cuando las pruebas pasen se garantizará que el software cumple con los requisitos que se han establecido.
 
 ## ATDD (Acceptance Test Driven Development)
-Los tests de aceptación o de cliente son el criterio escrito de que el software cumple los requisitos de negocio que el cliente demanda. Los requisitos se traducen por  ejemplos ejecutables ( de como se ejecuta una funcionalidad con sus entradas y salidas esperadas) surgidos del consenso entre los distintos miembros del equipo, incluido por supuesto el cliente. Una vez que tenemos los ATDD, se crea el test que lo representa, y posteriormente iniciamos TDD, de esta manera el código que pasa el test se asegura que cumple con el requisito a conseguir.
+Los tests de aceptación o de cliente son el criterio escrito de que el software cumple los requisitos de negocio que el cliente demanda. Los requisitos se traducen por  ejemplos ejecutables ( de como se ejecuta una funcionalidad con sus entradas y salidas esperadas ) surgidos del consenso entre los distintos miembros del equipo, incluido por supuesto el cliente. Una vez que tenemos los ATDD, se crea el test que lo representa, y posteriormente iniciamos TDD, de esta manera el código que pasa el test se asegura que cumple con el requisito a conseguir.
 
 ![img2](https://miro.medium.com/max/1022/1*t0vN-a82ilRIv7M9fgJvIw.png)
 
