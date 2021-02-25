@@ -12,6 +12,8 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
 
 - [Testing JS con JEST](#testing-js-con-jest)
   - [Acerca de](#acerca-de)
+- [¿Por qué Jest?](#por-qué-jest)
+  - [Otras alternativas](#otras-alternativas)
 - [Instalación](#instalación)
   - [Otras configuraciones](#otras-configuraciones)
   - [Ejecutando el test](#ejecutando-el-test)
@@ -32,6 +34,7 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
   - [Jest-DOM](#jest-dom)
 - [Snapshot testing](#snapshot-testing)
 - [Principios del TDD](#principios-del-tdd)
+  - [ATDD (Acceptance Test Driven Development)](#atdd-acceptance-test-driven-development)
   - [Ejemplo Contactos](#ejemplo-contactos)
   - [Ejemplo Cuenta](#ejemplo-cuenta)
   - [Mocks en TDD](#mocks-en-tdd)
@@ -50,6 +53,19 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
 ## Acerca de
 Conjunto de códigos con el objetivo de introducir la suite de test [Jest](https://jestjs.io/docs/es-ES/getting-started) y mostrar como realizar test unitarios y TDD sobre JavaScript y sobre Vue.js.
 
+![ima](https://landing-page-book.front10.com/images/frameworks/jest.png)
+
+# ¿Por qué Jest?
+[Jest](https://jestjs.io/docs/es-ES/getting-started) es una de las muchas posibilidades que tenemos para testear nuestro código o proyecto en JavaScript (ya sea en cliente o en Node.js). Jest está basado en [Jasmine](https://jasmine.github.io/), y se define como la suite de "test con 0 configuración", es decir, mietras otras suite de test necesitan de de un motor (test runner) para pasar los test y de la propia suit de test como de una librería de asercciones o matchers, Jest intenta que todo esto esté ya agrupado para agilizar el proceos de test desde el principio. Esto no quiere deceir que no se pueda ampliar o profundizar y personalizar con otras librerías o no tenga la potencia de otros.
+
+En cualquier caso, las bases de estos ejemplos te servirá para las distintas alternativas existentes.
+
+## Otras alternativas
+- [Jasmine](https://jasmine.github.io/). Es una de las ibrerías por excelencia para hacer test, "padre" de Jest y además la suite básica en [Angular](https://angular.io/guide/testing).
+- [Karma](https://karma-runner.github.io/latest/index.html). Es un motor de test, que desarrollado por el equipo de Ángular, suele usarser junto Jasmine para este tipo de proyectos.
+- [Mocha](https://mochajs.org/). Es una librería de test pensanda sobre todo para apliaciones Node.js muy pontente y configurable al gusto.
+- [Chai](https://www.chaijs.com/). Es un librería de asercciones generalmente usada con Mocha para dar potencia a nuestros matcher en nuetsros tests.
+
 # Instalación
 Es importante seguir la [documentación oficial](https://jestjs.io/docs/es-ES/getting-started). 
 
@@ -67,7 +83,7 @@ npm run test
 ```
 
 # Matchers
- Los [Matchers](https://jestjs.io/docs/es-ES/using-matchers) nos permiten comparar de diferente manera valores esperados con los obtenidos. Podemos hacerlo de la siguiente manera, aunque hay [mas](https://jestjs.io/docs/es-ES/expect):
+ Los [Matchers](https://jestjs.io/docs/es-ES/using-matchers) nos permiten comparar de diferente manera valores esperados con los obtenidos. Podemos hacerlo de la siguiente manera, aunque hay [más](https://jestjs.io/docs/es-ES/expect):
 
 ## Igualdad
   - .toBe: Usado para comparar valores primitivos
@@ -172,7 +188,14 @@ Automatizar los test unitarios y poder trabajar con ellos nos ofrece iniciar las
 - Vuelve al primer paso
 - Y disfruta 🙂 
 
+![img](https://i0.wp.com/www.clubdetecnologia.net/wp-content/uploads/2017/10/tdd-red-green-refactor.png)
+
 El propósito del desarrollo guiado por pruebas es lograr un código limpio que funcione. La idea es que los requisitos sean traducidos a pruebas, de este modo, cuando las pruebas pasen se garantizará que el software cumple con los requisitos que se han establecido.
+
+## ATDD (Acceptance Test Driven Development)
+Los tests de aceptación o de cliente son el criterio escrito de que el software cumple los requisitos de negocio que el cliente demanda. Los requisitos se traducen por  ejemplos ejecutables ( de como se ejecuta una funcionalidad con sus entradas y salidas) surgidos del consenso entre los distintos miembros del equipo, incluido por supuesto el cliente. Una vez que tenemos los ATDD, se crea el test que lo representa, y posteriormente iniciamos TDD, de esta manera el código que pasa el test se asegura que cumple con el requisito a conseguir.
+
+![img2](https://miro.medium.com/max/1022/1*t0vN-a82ilRIv7M9fgJvIw.png)
 
 ## Ejemplo Contactos
 Puedes ver este ejemplo en contactos.js, donde primero se hizo los test y luego se hizo una implementación que además presenta distintas alternativas.
@@ -185,6 +208,8 @@ También podemos hacer uso de Mocks para crear los test desde el comienzo y sabe
 
 # Testeando un Framework: Vue.js
 En este caso vamos a ver como testear un Framework. Es importante remarcar que cada Framework tiene sus propias particularidades y debemos leer bien su docuemntación de como hacerlo. En nuestro caso usaremos [Vue.js](https://vuejs.org/) y su suite de herramientas de testeo que ussan Jest, concidas como [Vue Test Utils](https://vue-test-utils.vuejs.org/). Hemos usado como ejemplo el proyecto en src/vue-testing.
+
+![img](https://www.fullstackpython.com/img/logos/vuejs-wide.png)
 
 ## Testear en Vue.js
 Nos centraremos en ejecutar el comando test:unit para ejecutar nuestros test unitarios
@@ -228,8 +253,6 @@ Podemos acceder a cada elemento del componente usando la función find y usando 
 - pseudo selectors (div:first-of-type)
 
 En nuestro caso usaremos la pripiedad de vue [:data-testid para nombrar inequícamente](https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change) los elementos que querdamos/usaremos para testear y referenciarlos con el selector CSS. P
-
-
 
 ## Ejemplos
 En el proyecto Vue que tienes, existen ejemplos de cada cosa indicada: 
