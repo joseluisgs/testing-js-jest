@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-describe('Test google Google', () => {
+describe('Test iniciales Google', () => {
   // Antes de todo, cargamos Google
   beforeAll(async () => {
     await page.goto('https://google.com');
