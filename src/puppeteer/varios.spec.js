@@ -23,4 +23,12 @@ describe('Varios test interesantes', () => {
     expect(selectOptions).toContain('Open this select menu');
     // console.log(selectOptions);
   });
+
+  test('Eventos del Teclado', async () => {
+    const page = await browser.newPage();
+    await page.goto('https://trix-editor.org/');
+    await page.focus('trix-editor');
+    await page.keyboard.type('Hola Hola 2DAW');
+    await page.screenshot({ path: './img/teclado.png' });
+  });
 });
