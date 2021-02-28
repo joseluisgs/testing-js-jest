@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1614000066563" clover="3.2.0">
-  <project timestamp="1614000066563" name="All files">
-    <metrics statements="75" coveredstatements="75" conditionals="33" coveredconditionals="33" methods="34" coveredmethods="34" elements="142" coveredelements="142" complexity="0" loc="75" ncloc="75" packages="2" files="10" classes="10"/>
+<coverage generated="1614514222947" clover="3.2.0">
+  <project timestamp="1614514222948" name="All files">
+    <metrics statements="56" coveredstatements="56" conditionals="26" coveredconditionals="26" methods="19" coveredmethods="19" elements="101" coveredelements="101" complexity="0" loc="56" ncloc="56" packages="2" files="8" classes="8"/>
     <package name="src">
-      <metrics statements="40" coveredstatements="40" conditionals="7" coveredconditionals="7" methods="26" coveredmethods="26"/>
+      <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
       <file name="arrays.js" path="/home/informatica/Proyectos/testing-js/src/arrays.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-      </file>
-      <file name="asincronia.js" path="/home/informatica/Proyectos/testing-js/src/asincronia.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
       </file>
       <file name="boolean.js" path="/home/informatica/Proyectos/testing-js/src/boolean.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
@@ -23,23 +15,6 @@
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-      </file>
-      <file name="contactos.js" path="/home/informatica/Proyectos/testing-js/src/contactos.js">
-        <metrics statements="14" coveredstatements="14" conditionals="7" coveredconditionals="7" methods="9" coveredmethods="9"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="14" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="22" count="7" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="34" count="2" type="stmt"/>
-        <line num="35" count="6" type="stmt"/>
-        <line num="36" count="4" type="stmt"/>
-        <line num="41" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="56" count="4" type="stmt"/>
-        <line num="63" count="3" type="stmt"/>
-        <line num="74" count="2" type="stmt"/>
-        <line num="75" count="1" type="stmt"/>
-        <line num="76" count="1" type="stmt"/>
       </file>
       <file name="funciones.js" path="/home/informatica/Proyectos/testing-js/src/funciones.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>

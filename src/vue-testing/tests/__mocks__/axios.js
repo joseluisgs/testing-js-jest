@@ -2,7 +2,7 @@
 /* eslint-disable no-empty-function */
 
 export default {
-
+  
   async get() {
     return {
       data: [{

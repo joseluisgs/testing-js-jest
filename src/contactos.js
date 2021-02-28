@@ -1,6 +1,7 @@
 /* eslint-disable no-throw-literal */
-import axios from 'axios';
 
+// Ojo que puede chocar con el mock de vue al haberlo construido...
+import api from 'axios';
 // Vamos a trabajar con un array de contactos y sus operaciones
 let contactos = [];
 
@@ -71,7 +72,7 @@ export default {
    */
   async starwars(url) {
     // https://swapi.dev/
-    return axios.get(url)
+    return api.get(url)
       .then(({ data }) => data.count)
       .catch((error) => (error));
   },

@@ -12,6 +12,7 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
 
 - [Testing JS con JEST](#testing-js-con-jest)
   - [Acerca de](#acerca-de)
+    - [Consideraciones](#consideraciones)
 - [¿Por qué Jest?](#por-qué-jest)
   - [Otras alternativas](#otras-alternativas)
 - [Instalación](#instalación)
@@ -52,6 +53,9 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
 
 ## Acerca de
 Conjunto de códigos con el objetivo de introducir la suite de test [Jest](https://jestjs.io/docs/es-ES/getting-started) y mostrar como realizar test unitarios y TDD/ATDD sobre JavaScript para Node.js, HTML y un Framework como Vue.js.
+
+### Consideraciones
+No intentes ejecutar todos os test porque pueden dar error por incompatibilidades. Por favor sigue el tutorial y sus commits.
 
 # ¿Por qué Jest?
 [Jest](https://jestjs.io/docs/es-ES/getting-started) es una de las muchas posibilidades que tenemos para testear nuestro código o proyecto en JavaScript (ya sea en cliente o en Node.js). Jest está basado en [Jasmine](https://jasmine.github.io/), y se define como la suite de "test con 0 configuración", es decir, mietras otras suite de test necesitan de de un motor (test runner) para pasar los test y de la propia suit de test como de una librería de asercciones o matchers, Jest intenta que todo esto esté ya agrupado para agilizar el proceos de test desde el principio. Esto no quiere deceir que no se pueda ampliar o profundizar y personalizar con otras librerías o no tenga la potencia de otros.
