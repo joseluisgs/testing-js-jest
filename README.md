@@ -61,6 +61,7 @@ En cualquier caso, las bases de estos ejemplos te servirá para las distintas al
 ![img](https://landing-page-book.front10.com/images/frameworks/jest.png)
 
 ## Otras alternativas
+Existen muchas alternativas y cada una enfocadas a un aspecto. En este tutorial me centro en Jest, pero como he dicho hay varias ya sea para test unitarios, TDD, BDD o E2E. Te recomiendo [este artículo](https://medium.com/welldone-software/an-overview-of-javascript-testing-7ce7298b9870) para tener una visión al respecto. Remarco los siguientes para test unitarios:
 - [Jasmine](https://jasmine.github.io/). Es una de las ibrerías por excelencia para hacer test, "padre" de Jest y además la suite básica en [Angular](https://angular.io/guide/testing).
 - [Karma](https://karma-runner.github.io/latest/index.html). Es un motor de test, que desarrollado por el equipo de Ángular, suele usarser junto Jasmine para este tipo de proyectos.
 - [Mocha](https://mochajs.org/). Es una librería de test pensanda sobre todo para apliaciones Node.js muy pontente y configurable al gusto.
