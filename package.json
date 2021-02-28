@@ -26,13 +26,10 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "babel-preset-airbnb": "^5.0.0",
-    "chromedriver": "^88.0.0",
     "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "geckodriver": "^1.22.1",
     "jest": "^26.6.3",
-    "jest-environment-webdriver": "^0.2.0",
     "nodemon": "^2.0.7",
     "supertest": "^6.1.3"
   },
