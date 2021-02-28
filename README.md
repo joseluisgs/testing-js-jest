@@ -47,6 +47,10 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
   - [Testeando Métodos y Eventos](#testeando-métodos-y-eventos)
   - [Accediendos a elementos del DOM o específicos](#accediendos-a-elementos-del-dom-o-específicos)
   - [Ejemplos](#ejemplos)
+- [Intrducción al Testing E2E con Jest](#intrducción-al-testing-e2e-con-jest)
+  - [Acciones](#acciones)
+  - [¿Cómo hacer el e2e?](#cómo-hacer-el-e2e)
+  - [Ejemplos](#ejemplos-1)
 - [Autor](#autor)
   - [Licencia](#licencia)
     - [Agradecimientos](#agradecimientos)
@@ -265,7 +269,29 @@ En el proyecto Vue que tienes, existen ejemplos de cada cosa indicada:
 - TheHeader, Parent y Child en con TestingVue para ver las diferentes formas de testear a nivel básico y como hacer wrapper de los componentes.
 - Final.vue donde se testea propiedades, datos, eventos y métodos.
 - ToDo.vue, el cual nos sirve para testear un típico gestor de tareas y trabajar con selectores del tipo id, así como mock con Jest en vue. De hecho se ha hecho un mock de axios, de la manera que siempre que llamemos a una función que usa axios, se simula dicha funcion usando el mock, es decir, se simula su comportamiento con los datos que tenemos en la carpeta __mocks__. Jest recogerá automáticamente este archivo y mapeará las llamadas que se hace a la biblioteca axios por las llamadas a nuestro fichero en el test ahorrarnos el consumo de la API REST externa y mejorando el rendimienro de nuestros test.
-  
+
+# Intrducción al Testing E2E con Jest
+
+Los Tests E2E simulan el comportamiento de un usuario real. Prueban toda la aplicación de principio a fin, cubriendo así secciones que las pruebas unitarias y las pruebas de integración no cubren simulando acciones del usuario sobre la interfaz y sus compoentes a nivel conjunto.
+
+Aunque hay Frameworks específicios para hacer este tipo de tareas, como es el conocido [Cypress.io](https://www.cypress.io/), nosotros estamos trabajando con el motor Jest y queremos algo que nos simplifique esto y ademas con apenas [configuración](https://jestjs.io/docs/en/puppeteer). Es por ello que vamos a hacer uso de [Puppeteer](https://developers.google.com/web/tools/puppeteer) para este menester.
+
+![img](https://blog.theodo.com/static/4fa13218586c9165575f0f75d80e7f3d/a79d3/1_pN3IJVbx2iv97xJ6sB9jJA.png)
+
+## Acciones
+Con esta librería [podemos hacer](https://www.adictosaltrabajo.com/2020/02/27/testing-funcional-con-puppeteer/):
+- Analizar el SEO de la página y obtener sus atributos.
+- Modificar el viewport y capturar la pantalla.
+- Utilizar selectores.
+- Disparar eventos.
+- Interactuar con los elementos.
+
+## ¿Cómo hacer el e2e?
+Partimos de los test de aceptación y automatizamos el flujo de [acciones que el usuario haría y queremos probar](https://medium.com/puntotech/tests-e2e-con-jest-y-puppeteer-1c5f25e1e3aa).
+
+## Ejemplos
+En la carpeta puppeteer tienes unos cuantos, además que puedes encontrar pro internet, pero te recomiendo [este](https://github.com/checkly/puppeteer-examples) y [este](https://github.com/puppeteer/puppeteer/tree/main/examples). Esi sí, no olvides que ya debes usarlo dentro del motro de Jest y siguiendo la filosofía de Jest.
+
 # Autor
 
 Codificado con :sparkling\_heart: por [José Luis González Sánchez](https://twitter.com/joseluisgonsan)
