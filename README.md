@@ -45,7 +45,7 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
   - [Test sobre las propiedades](#test-sobre-las-propiedades)
   - [Test sobre propiedades computadas](#test-sobre-propiedades-computadas)
   - [Testeando Métodos y Eventos](#testeando-métodos-y-eventos)
-  - [Accediendos a elementos del DOM o específicos](#accediendos-a-elementos-del-dom-o-específicos)
+  - [Accediendo a elementos del DOM o específicos](#accediendo-a-elementos-del-dom-o-específicos)
   - [Ejemplos](#ejemplos)
 - [Introducción al Testing E2E con Jest](#introducción-al-testing-e2e-con-jest)
   - [Acciones](#acciones)
@@ -62,7 +62,7 @@ Conjunto de códigos con el objetivo de introducir la suite de test [Jest](https
 No intentes ejecutar todos os test porque pueden dar error por incompatibilidades. Por favor sigue el tutorial y sus commits.
 
 # ¿Por qué Jest?
-[Jest](https://jestjs.io/docs/es-ES/getting-started) es una de las muchas posibilidades que tenemos para testear nuestro código o proyecto en JavaScript (ya sea en cliente o en Node.js). Jest está basado en [Jasmine](https://jasmine.github.io/), y se define como la suite de "test con 0 configuración", es decir, mietras otras suite de test necesitan de de un motor (test runner) para pasar los test y de la propia suit de test como de una librería de asercciones o matchers, Jest intenta que todo esto esté ya agrupado para agilizar el proceos de test desde el principio. Esto no quiere deceir que no se pueda ampliar o profundizar y personalizar con otras librerías o no tenga la potencia de otros.
+[Jest](https://jestjs.io/docs/es-ES/getting-started) es una de las muchas posibilidades que tenemos para testear nuestro código o proyecto en JavaScript (ya sea en cliente o en Node.js). Jest está basado en [Jasmine](https://jasmine.github.io/), y se define como la suite de "test con 0 configuración", es decir, mientras otras suite de test necesitan de de un motor (test runner) para pasar los test y de la propia suit de test como de una librería de asercciones o matchers, Jest intenta que todo esto esté ya agrupado para agilizar el procesos de test desde el principio. Esto no quiere decir que no se pueda ampliar o profundizar y personalizar con otras librerías o no tenga la potencia de otros.
 
 En cualquier caso, las bases de estos ejemplos te servirá para las distintas alternativas existentes.
 
@@ -70,10 +70,10 @@ En cualquier caso, las bases de estos ejemplos te servirá para las distintas al
 
 ## Otras alternativas
 Existen muchas alternativas y cada una enfocadas a un aspecto. En este tutorial me centro en Jest, pero como he dicho hay varias ya sea para test unitarios, TDD, BDD o E2E. Te recomiendo [este artículo](https://medium.com/welldone-software/an-overview-of-javascript-testing-7ce7298b9870) para tener una visión al respecto. Remarco los siguientes para test unitarios:
-- [Jasmine](https://jasmine.github.io/). Es una de las ibrerías por excelencia para hacer test, "padre" de Jest y además la suite básica en [Angular](https://angular.io/guide/testing).
-- [Karma](https://karma-runner.github.io/latest/index.html). Es un motor de test, que desarrollado por el equipo de Ángular, suele usarser junto Jasmine para este tipo de proyectos.
-- [Mocha](https://mochajs.org/). Es una librería de test pensanda sobre todo para apliaciones Node.js muy pontente y configurable al gusto.
-- [Chai](https://www.chaijs.com/). Es un librería de asercciones generalmente usada con Mocha para dar potencia a nuestros matcher en nuetsros tests.
+- [Jasmine](https://jasmine.github.io/). Es una de las librerías por excelencia para hacer test, "padre" de Jest y además la suite básica en [Angular](https://angular.io/guide/testing).
+- [Karma](https://karma-runner.github.io/latest/index.html). Es un motor de test, que desarrollado por el equipo de Ángular, suele usarse junto Jasmine para este tipo de proyectos.
+- [Mocha](https://mochajs.org/). Es una librería de test pensada sobre todo para apliaciones Node.js muy potente y configurable al gusto.
+- [Chai](https://www.chaijs.com/). Es un librería de asercciones generalmente usada con Mocha para dar potencia a nuestros matcher en nuestros tests.
 
 # Instalación
 Es importante seguir la [documentación oficial](https://jestjs.io/docs/es-ES/getting-started). 
@@ -173,7 +173,7 @@ Otra de las cosas que podemos hacer es testar nuestra propia API Rest o Api REST
 Para testear más rápido podemos usar ficheros mocks locales.
 
 # Testing DOM
-Podemos testar nuestro DOM con [Jest](https://jestjs.io/docs/es-ES/tutorial-jquery) usando Vanilla JS o JQuery, incluso podemos hacer uso de la librería [Jest-DOM](https://github.com/testing-library/jest-dom). Es recomendable que sepamos pasar la parte de la web y la lógica que queramos testear. Jest viene con jsdom que simula un entorno DOM como si estuviera en el navegador. Esto significa que cada API DOM que llamamos se puede observar de la misma manera que se observaría en un navegador. Un ejemplo de testear un ejemplo de DOM con Vanila JS lo tienes en todolist.js.
+Podemos testar nuestro DOM con [Jest](https://jestjs.io/docs/es-ES/tutorial-jquery) usando Vanilla JS o JQuery, incluso podemos hacer uso de la librería [Jest-DOM](https://github.com/testing-library/jest-dom). Es recomendable que sepamos pasar la parte de la web y la lógica que queramos testear. Jest viene con jsdom que simula un entorno DOM como si estuviera en el navegador. Esto significa que cada API DOM que llamamos se puede observar de la misma manera que se observaría en un navegador. Un ejemplo de testear un ejemplo de DOM con Vanilla JS lo tienes en todolist.js.
 
 ## Jest-DOM 
 [Jest-DOM](https://github.com/testing-library/jest-dom) es una librería que extiende Jest para usarla para testar tus ampliaciones HTML con una serie de [Matchers](https://github.com/testing-library/jest-dom#custom-matchers) especializados para esta labor pos si queremos usarlo. 
@@ -210,7 +210,7 @@ Los tests de aceptación o de cliente son el criterio escrito de que el software
 Puedes ver este ejemplo en contactos.js, donde primero se hizo los test y luego se hizo una implementación que además presenta distintas alternativas.
 
 ## Ejemplo Cuenta
-Además puedes seguir el ejemplo en src/cuenta donde se ha desarrollado un ejemplo completo siguoendo TDD y ATDD donde puede seguirlo commit a commit.
+Además puedes seguir el ejemplo en src/cuenta donde se ha desarrollado un ejemplo completo siguiendo TDD y ATDD donde puede seguirlo commit a commit.
 
 ## Mocks en TDD
 También podemos hacer uso de Mocks para crear los test desde el comienzo y saber si están correctos y con estos mock posteriormente crear nuestro código que lo paso. Recuerda que un Mock es un objeto pre-programado con expectativas que conforman la especificación de cómo se espera que se reciban las llamadas. Puedes verlo en el fichero mocks.
@@ -225,7 +225,7 @@ Nos centraremos en ejecutar el comando test:unit para ejecutar nuestros test uni
 ```bash
 npm run test:unit
 ```
-E iremos apliacando TDD. Puedes seguir el proyecto commit a commit.
+E iremos aplicando TDD. Puedes seguir el proyecto commit a commit.
 
 ## Montando componentes
 Para realizar el montaje del componente para nuestra prueba usando la siguiente linea: const wrapper = mount(XXXX), Siendo XXXX El componente a montar.
@@ -245,7 +245,7 @@ Si nos fijamos, podemos ver que el Padre que contiene un hijo cuando usamos shal
 ## Test sobre las propiedades
 Para realizar los test sobre las propiedades de nuestro componentes, vue-test-utils ofrece tanto para mount como shallowMount un segundo parámetro llamado propsData.
 
-Ademas de propsData, también podemos usar setProps para añadir propiedades (Pero este es asíncrono y devemos usar async/await).
+Ademas de propsData, también podemos usar setProps para añadir propiedades (Pero este es asíncrono y debemos usar async/await).
 
 ## Test sobre propiedades computadas
 Los test sobre las propiedades computadas son muy sencillos, ya que únicamente deberemos llamarlas como lo haríamos en nuestro código.
@@ -253,7 +253,7 @@ Los test sobre las propiedades computadas son muy sencillos, ya que únicamente 
 ## Testeando Métodos y Eventos
 Los eventos de un componente pueden llamar a métodos, para ello los llamamos igual que un método normal y comprobamos los resultados, o llamamos con el método trigger al evento disparado.
 
-## Accediendos a elementos del DOM o específicos
+## Accediendo a elementos del DOM o específicos
 Podemos acceder a cada elemento del componente usando la función find y usando el [selectores de CSS](https://vue-test-utils.vuejs.org/api/#selectors):
 - tag selectors (div, foo, bar)
 - class selectors (.foo, .bar)
@@ -261,7 +261,7 @@ Podemos acceder a cada elemento del componente usando la función find y usando 
 - id selectors (#foo, #bar)
 - pseudo selectors (div:first-of-type)
 
-En nuestro caso usaremos la pripiedad de vue [:data-testid para nombrar inequícamente](https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change) los elementos que querdamos/usaremos para testear y referenciarlos con el selector CSS. P
+En nuestro caso usaremos la propiedad de vue [:data-testid para nombrar inequícamente](https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change) los elementos que queramos/usaremos para testear y referenciarlos con el selector CSS. P
 
 ## Ejemplos
 En el proyecto Vue que tienes, existen ejemplos de cada cosa indicada: 
@@ -274,7 +274,7 @@ En el proyecto Vue que tienes, existen ejemplos de cada cosa indicada:
 
 Los Tests E2E simulan el comportamiento de un usuario real. Prueban toda la aplicación de principio a fin, cubriendo así secciones que las pruebas unitarias y las pruebas de integración no cubren simulando acciones del usuario sobre la interfaz y sus componentes a nivel conjunto.
 
-Aunque hay Frameworks específicios para hacer este tipo de tareas, como es el conocido [Cypress.io](https://www.cypress.io/), nosotros estamos trabajando con el motor Jest y queremos algo que nos simplifique esto y ademas con apenas [configuración](https://jestjs.io/docs/en/puppeteer). Es por ello que vamos a hacer uso de [Puppeteer](https://developers.google.com/web/tools/puppeteer) para este menester.
+Aunque hay Frameworks específicos para hacer este tipo de tareas, como es el conocido [Cypress.io](https://www.cypress.io/), nosotros estamos trabajando con el motor Jest y queremos algo que nos simplifique esto y ademas con apenas [configuración](https://jestjs.io/docs/en/puppeteer). Es por ello que vamos a hacer uso de [Puppeteer](https://developers.google.com/web/tools/puppeteer) para este menester.
 
 ![img](https://blog.theodo.com/static/4fa13218586c9165575f0f75d80e7f3d/a79d3/1_pN3IJVbx2iv97xJ6sB9jJA.png)
 
@@ -290,7 +290,7 @@ Con esta librería [podemos hacer](https://www.adictosaltrabajo.com/2020/02/27/t
 Partimos de los test de aceptación y automatizamos el flujo de [acciones que el usuario haría y queremos probar](https://medium.com/puntotech/tests-e2e-con-jest-y-puppeteer-1c5f25e1e3aa).
 
 ## Ejemplos
-En la carpeta puppeteer tienes unos cuantos, además que puedes encontrar pro internet, pero te recomiendo [este](https://github.com/checkly/puppeteer-examples) y [este](https://github.com/puppeteer/puppeteer/tree/main/examples). Esi sí, no olvides que ya debes usarlo dentro del motro de Jest y siguiendo la filosofía de Jest.
+En la carpeta puppeteer tienes unos cuantos, además que puedes encontrar pro internet, pero te recomiendo [este](https://github.com/checkly/puppeteer-examples) y [este](https://github.com/puppeteer/puppeteer/tree/main/examples). Esi sí, no olvides que ya debes usarlo dentro del otro de Jest y siguiendo la filosofía de Jest.
 
 # Autor
 
