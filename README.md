@@ -47,7 +47,7 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
   - [Testeando Métodos y Eventos](#testeando-métodos-y-eventos)
   - [Accediendos a elementos del DOM o específicos](#accediendos-a-elementos-del-dom-o-específicos)
   - [Ejemplos](#ejemplos)
-- [Intrducción al Testing E2E con Jest](#intrducción-al-testing-e2e-con-jest)
+- [Introducción al Testing E2E con Jest](#introducción-al-testing-e2e-con-jest)
   - [Acciones](#acciones)
   - [¿Cómo hacer el e2e?](#cómo-hacer-el-e2e)
   - [Ejemplos](#ejemplos-1)
@@ -216,12 +216,12 @@ Además puedes seguir el ejemplo en src/cuenta donde se ha desarrollado un ejemp
 También podemos hacer uso de Mocks para crear los test desde el comienzo y saber si están correctos y con estos mock posteriormente crear nuestro código que lo paso. Recuerda que un Mock es un objeto pre-programado con expectativas que conforman la especificación de cómo se espera que se reciban las llamadas. Puedes verlo en el fichero mocks.
 
 # Testeando un Framework: Vue.js
-En este caso vamos a ver como testear un Framework. Es importante remarcar que cada Framework tiene sus propias particularidades y debemos leer bien su docuemntación de como hacerlo. En nuestro caso usaremos [Vue.js](https://vuejs.org/) y su suite de herramientas de testeo que ussan Jest, concidas como [Vue Test Utils](https://vue-test-utils.vuejs.org/). Hemos usado como ejemplo el proyecto en src/vue-testing.
+En este caso vamos a ver como testear un Framework. Es importante remarcar que cada Framework tiene sus propias particularidades y debemos leer bien su documentación de como hacerlo. En nuestro caso usaremos [Vue.js](https://vuejs.org/) y su suite de herramientas de testeo que usan Jest, conocidas como [Vue Test Utils](https://vue-test-utils.vuejs.org/). Hemos usado como ejemplo el proyecto en src/vue-testing.
 
 ![img](https://www.fullstackpython.com/img/logos/vuejs-wide.png)
 
 ## Testear en Vue.js
-Nos centraremos en ejecutar el comando test:unit para ejecutar nuestros test unitarios
+Nos centraremos en ejecutar el comando test:unit para ejecutar nuestros test unitarios. Para ello crearemos el proyecto con [Vue CLI](https://cli.vuejs.org/) indicando en la configuración manual el uso de test unitarios.
 ```bash
 npm run test:unit
 ```
@@ -268,11 +268,11 @@ En el proyecto Vue que tienes, existen ejemplos de cada cosa indicada:
 - HelloWorld y como testear un componente básico en example.spec.js.
 - TheHeader, Parent y Child en con TestingVue para ver las diferentes formas de testear a nivel básico y como hacer wrapper de los componentes.
 - Final.vue donde se testea propiedades, datos, eventos y métodos.
-- ToDo.vue, el cual nos sirve para testear un típico gestor de tareas y trabajar con selectores del tipo id, así como mock con Jest en vue. De hecho se ha hecho un mock de axios, de la manera que siempre que llamemos a una función que usa axios, se simula dicha funcion usando el mock, es decir, se simula su comportamiento con los datos que tenemos en la carpeta __mocks__. Jest recogerá automáticamente este archivo y mapeará las llamadas que se hace a la biblioteca axios por las llamadas a nuestro fichero en el test ahorrarnos el consumo de la API REST externa y mejorando el rendimienro de nuestros test.
+- ToDo.vue, el cual nos sirve para testear un típico gestor de tareas y trabajar con selectores del tipo id, así como mock con Jest en vue. De hecho se ha hecho un mock de axios, de la manera que siempre que llamemos a una función que usa axios, se simula dicha función usando el mock, es decir, se simula su comportamiento con los datos que tenemos en la carpeta __mocks__. Jest recogerá automáticamente este archivo y mapeará las llamadas que se hace a la biblioteca axios por las llamadas a nuestro fichero en el test ahorrarnos el consumo de la API REST externa y mejorando el rendimiento de nuestros test.
 
-# Intrducción al Testing E2E con Jest
+# Introducción al Testing E2E con Jest
 
-Los Tests E2E simulan el comportamiento de un usuario real. Prueban toda la aplicación de principio a fin, cubriendo así secciones que las pruebas unitarias y las pruebas de integración no cubren simulando acciones del usuario sobre la interfaz y sus compoentes a nivel conjunto.
+Los Tests E2E simulan el comportamiento de un usuario real. Prueban toda la aplicación de principio a fin, cubriendo así secciones que las pruebas unitarias y las pruebas de integración no cubren simulando acciones del usuario sobre la interfaz y sus componentes a nivel conjunto.
 
 Aunque hay Frameworks específicios para hacer este tipo de tareas, como es el conocido [Cypress.io](https://www.cypress.io/), nosotros estamos trabajando con el motor Jest y queremos algo que nos simplifique esto y ademas con apenas [configuración](https://jestjs.io/docs/en/puppeteer). Es por ello que vamos a hacer uso de [Puppeteer](https://developers.google.com/web/tools/puppeteer) para este menester.
 
