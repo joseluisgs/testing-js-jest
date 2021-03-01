@@ -11,29 +11,29 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
 
 
 - [Testing JS con JEST](#testing-js-con-jest)
-  - [Acerca de](#acerca-de)
-    - [Consideraciones](#consideraciones)
-- [¿Por qué Jest?](#por-qué-jest)
+- [Acerca de](#acerca-de)
+  - [Consideraciones](#consideraciones)
+- [JEST](#jest)
   - [Otras alternativas](#otras-alternativas)
-- [Instalación](#instalación)
+  - [Instalación](#instalación)
   - [Otras configuraciones](#otras-configuraciones)
   - [Ejecutando el test](#ejecutando-el-test)
-- [Matchers](#matchers)
-  - [Igualdad](#igualdad)
-  - [Numéricos](#numéricos)
-  - [Boolean, Nulos y Undefined](#boolean-nulos-y-undefined)
-  - [Arrays y contenido](#arrays-y-contenido)
-  - [Strings](#strings)
-- [Cobertura](#cobertura)
-  - [Informe de Cobertura consola](#informe-de-cobertura-consola)
-  - [Informe de Cobertura Web](#informe-de-cobertura-web)
+  - [Matchers](#matchers)
+    - [Igualdad](#igualdad)
+    - [Numéricos](#numéricos)
+    - [Boolean, Nulos y Undefined](#boolean-nulos-y-undefined)
+    - [Arrays y contenido](#arrays-y-contenido)
+    - [Strings](#strings)
+  - [Cobertura](#cobertura)
+    - [Informe de Cobertura consola](#informe-de-cobertura-consola)
+    - [Informe de Cobertura Web](#informe-de-cobertura-web)
   - [Test detectando cambios](#test-detectando-cambios)
-- [Precondiciones y postcondiciones de test](#precondiciones-y-postcondiciones-de-test)
-- [Testing asíncrono](#testing-asíncrono)
-- [Testing API REST](#testing-api-rest)
-- [Testing DOM](#testing-dom)
-  - [Jest-DOM](#jest-dom)
-- [Snapshot testing](#snapshot-testing)
+  - [Precondiciones y postcondiciones de test](#precondiciones-y-postcondiciones-de-test)
+  - [Testing asíncrono](#testing-asíncrono)
+  - [Testing API REST](#testing-api-rest)
+  - [Testing DOM](#testing-dom)
+    - [Jest-DOM](#jest-dom)
+  - [Snapshot testing](#snapshot-testing)
 - [Principios del TDD](#principios-del-tdd)
   - [ATDD (Acceptance Test Driven Development)](#atdd-acceptance-test-driven-development)
   - [Ejemplo Contactos](#ejemplo-contactos)
@@ -55,13 +55,13 @@ Conjunto de ejemplos para realizar test unitarios y TDD usando Jest con JavaScri
   - [Licencia](#licencia)
     - [Agradecimientos](#agradecimientos)
 
-## Acerca de
+# Acerca de
 Conjunto de códigos con el objetivo de introducir la suite de test [Jest](https://jestjs.io/docs/es-ES/getting-started) y mostrar como realizar test unitarios y TDD/ATDD sobre JavaScript para Node.js, HTML y un Framework como Vue.js.
 
-### Consideraciones
+## Consideraciones
 No intentes ejecutar todos os test porque pueden dar error por incompatibilidades. Por favor sigue el tutorial y sus commits.
 
-# ¿Por qué Jest?
+# JEST
 [Jest](https://jestjs.io/docs/es-ES/getting-started) es una de las muchas posibilidades que tenemos para testear nuestro código o proyecto en JavaScript (ya sea en cliente o en Node.js). Jest está basado en [Jasmine](https://jasmine.github.io/), y se define como la suite de "test con 0 configuración", es decir, mientras otras suite de test necesitan de de un motor (test runner) para pasar los test y de la propia suit de test como de una librería de asercciones o matchers, Jest intenta que todo esto esté ya agrupado para agilizar el procesos de test desde el principio. Esto no quiere decir que no se pueda ampliar o profundizar y personalizar con otras librerías o no tenga la potencia de otros.
 
 En cualquier caso, las bases de estos ejemplos te servirá para las distintas alternativas existentes.
@@ -75,7 +75,7 @@ Existen muchas alternativas y cada una enfocadas a un aspecto. En este tutorial 
 - [Mocha](https://mochajs.org/). Es una librería de test pensada sobre todo para apliaciones Node.js muy potente y configurable al gusto.
 - [Chai](https://www.chaijs.com/). Es un librería de asercciones generalmente usada con Mocha para dar potencia a nuestros matcher en nuestros tests.
 
-# Instalación
+## Instalación
 Es importante seguir la [documentación oficial](https://jestjs.io/docs/es-ES/getting-started). 
 
 ```bash
@@ -91,38 +91,38 @@ Debes tener un directorio llamado tests, y en ellos ficheros .spec.test.
 npm run test
 ```
 
-# Matchers
+## Matchers
  Los [Matchers](https://jestjs.io/docs/es-ES/using-matchers) nos permiten comparar de diferente manera valores esperados con los obtenidos. Podemos hacerlo de la siguiente manera, aunque hay [más](https://jestjs.io/docs/es-ES/expect):
 
-## Igualdad
+### Igualdad
   - .toBe: Usado para comparar valores primitivos
   - .toEqual: Usado para comparar recursívamente todas las propiedades de un objetos, también conocido como igualdad profunda.
 
-## Numéricos
+### Numéricos
   - .toBeLessThan: El valor es menor que.
   - .toBeLessThanOrEqual: El valor es menor o igual que.
   - .toBeGreaterThanOrEqual: El valor es mayor o igual que.
   - .toBeGreaterThan: El valor es mayor que.
 
-## Boolean, Nulos y Undefined
+### Boolean, Nulos y Undefined
   - .toBeTruthy: El valor es verdadero.
   - .toBeFalsy: El valor es falso.
   - .toBeUndefined: El valor es ‘undefined’
   - .toBeNull: El valor es ‘null’
 
-## Arrays y contenido
+### Arrays y contenido
   - .toContain: Contiene el elemento dentro del array
   - .toHaveLength: El array tiene la longitud
 
-## Strings
+### Strings
   - .toMatch: Comprueba que un texto coincide con una expresión regular
   - .toHaveLength: Comprueba la longitud.
   - Podemos usar otros anteriores
 
-# Cobertura
+## Cobertura
 Podemos saber cuanto hemos testeado nuestro código realizando un análisis de cobertura. Jest nos ofrece el flag –coverage en la linea de comandos para comprobar la cobertura de nuestros test.
 
-## Informe de Cobertura consola
+### Informe de Cobertura consola
 npm run test:coverage
 ```bash
 jest --coverage
@@ -146,7 +146,7 @@ Snapshots:   0 total
 Time:        1.703 s
 Ran all test suites.
 
-## Informe de Cobertura Web
+### Informe de Cobertura Web
 Está en la carpeta coverage creada, en coverage/lcov-report/index.html
 ## Test detectando cambios
 Jest nos ofrece el flag –watchAll para que este escuchando constantemente los cambios y pueda hacer las pruebas sobre los cambios realizados y no estar ejecutando el script constantemente.
@@ -156,29 +156,29 @@ npm run test:watch
 jest --watchAll
 ```
 
-# Precondiciones y postcondiciones de test
+## Precondiciones y postcondiciones de test
 Muchas veces queremos tener una serie de condiciones a ejecutar antes o después de cada test o de cada conjunto de test. Podemos ponerlo incluso en cada suite o conjunto de describe.
 - afterEach(): Después de cada prueba.
 - afterAll(): Después de todas las pruebas.
 - beforeEach(): Antes de cada prueba.
 - beforeAll(): Antes de todas las pruebas.
 
-# Testing asíncrono
+## Testing asíncrono
 Cuando necesitamos realizar test con funciones asíncronas jest nos ofrece varias opciones, usando callbacks, promesas y async / await.
 De esta manera podemos testar por ejemplo consumo de APIs REST y ya usar métodos anteriores para saber si lo que recibimos es correcto.
 
-# Testing API REST
+## Testing API REST
 Otra de las cosas que podemos hacer es testar nuestra propia API Rest o Api REST Remotas o simularlas en base de mocks. Para ello vamos a hacer uso de la librería [Supertest](https://github.com/visionmedia/supertest). También podríamos usar [Axios](https://github.com/axios/axios) como hemos visto en los apartados anteriores.
 
 Para testear más rápido podemos usar ficheros mocks locales.
 
-# Testing DOM
+## Testing DOM
 Podemos testar nuestro DOM con [Jest](https://jestjs.io/docs/es-ES/tutorial-jquery) usando Vanilla JS o JQuery, incluso podemos hacer uso de la librería [Jest-DOM](https://github.com/testing-library/jest-dom). Es recomendable que sepamos pasar la parte de la web y la lógica que queramos testear. Jest viene con jsdom que simula un entorno DOM como si estuviera en el navegador. Esto significa que cada API DOM que llamamos se puede observar de la misma manera que se observaría en un navegador. Un ejemplo de testear un ejemplo de DOM con Vanilla JS lo tienes en todolist.js.
 
-## Jest-DOM 
+### Jest-DOM 
 [Jest-DOM](https://github.com/testing-library/jest-dom) es una librería que extiende Jest para usarla para testar tus ampliaciones HTML con una serie de [Matchers](https://github.com/testing-library/jest-dom#custom-matchers) especializados para esta labor pos si queremos usarlo. 
 
-# Snapshot testing
+## Snapshot testing
 Los snapshots nos garantizan que no vaya a ocurrir algún cambio inesperado en nuestra UI. Comprobamos lo datos que tenemos con lo que estamos trayendo y que no deben de cambiar, ya que esto lo usamos para casos en donde algún dato en particular muy rara vez cambiará. 
 
 En caso de que queramos aceptar el cambio añadiremos el parámetro -u.
@@ -222,6 +222,17 @@ En este caso vamos a ver como testear un Framework. Es importante remarcar que c
 
 ## Testear en Vue.js
 Nos centraremos en ejecutar el comando test:unit para ejecutar nuestros test unitarios. Para ello crearemos el proyecto con [Vue CLI](https://cli.vuejs.org/) indicando en la configuración manual el uso de test unitarios.
+```bash
+ Please pick a preset: Manually select features
+? Check the features needed for your project: Choose Vue version, Babel, Linter, Unit, E2E
+? Choose a version of Vue.js that you want to start the project with 2.x
+? Pick a linter / formatter config: Airbnb
+? Pick additional lint features: Lint on save
+? Pick a unit testing solution: 
+  Mocha + Chai 
+❯ Jest 
+```
+Ejemplo para ejecutar los test
 ```bash
 npm run test:unit
 ```
