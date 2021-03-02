@@ -1,4 +1,4 @@
-# Supuesto Prático
+# Supuesto Práctico
 Supongamos que un cliente nos contrata para desarrollar la siguiente aplicación:
 
 "Quiero lanzar una aplicación monedero para el pago entre amigos. Cada usuario tendrá una cuenta con saldo. La idea es que se puedan hacer transferencias a tus amigos directamente desde la app. La aplicación permitirá al usuario ingresar dinero o retirarlo cuando quiera."
